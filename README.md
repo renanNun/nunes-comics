@@ -27,7 +27,7 @@ Scrum Master:
 
 - Entre na pasta onde irá guardar o projeto: `cd /caminho/para/a/pasta`
 - Clone o repositório: `git clone https://github.com/renanNun/nunes-comics.git`
-- Entre na pasta criada pelo comando clone: `cd nunes-comics
+- Entre na pasta criada pelo comando clone: ``cd nunes-comics``
 - Crie sua branch usando como o padrão o nome da feature que você está a desenvolver
 - Exemplo de criação de branch de uma view do painel administrativo
   - Crie a branch da funcionalidade a ser implementada: `git checkout -b view-painel-adm`
