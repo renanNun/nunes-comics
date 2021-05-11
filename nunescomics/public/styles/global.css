@@ -44,3 +44,11 @@ body {
   width: 100vw;
   background: var(--blue);
 }
+
+html {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
