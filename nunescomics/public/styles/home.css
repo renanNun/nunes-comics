@@ -1,11 +1,3 @@
-html {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow-x: hidden;
-}
-
 main {
   display: flex;
   flex-direction: column;
@@ -45,6 +37,8 @@ main {
   width: 300px;
   height: 300px;
   background: #000;
+
+  border: 5px solid black;
 }
 
 .latest .comic-cover {
@@ -82,20 +76,20 @@ main {
 }
 
 /* page halftone details ---------------------------------------------------- */
-.halftone.bottom {
+.halftone {
   position: fixed;
   width: 800px;
-  bottom: -560px;
-  left: -70px;
-  transform: rotate(10deg);
   z-index: -1;
 }
 
+.halftone.bottom {
+  bottom: -560px;
+  left: -70px;
+  transform: rotate(10deg);
+}
+
 .halftone.top {
-  position: fixed;
-  width: 800px;
   top: -420px;
   right: -510px;
   transform: rotate(210deg);
-  z-index: -1;
 }
