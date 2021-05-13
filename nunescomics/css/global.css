@@ -1,0 +1,14 @@
+:root {
+    --yellow: #F9E757;
+    --blue: #42AFC9;
+    --pink: #F9EBEB;
+    --black: #0B0C10;
+    --teal: #4E6B71;
+    --dark-teal: #415A60;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
