@@ -66,6 +66,20 @@ body{
 	-webkit-text-stroke-color: #000; /* cor da borda */
  }
 
+.content table,tr,td{
+ 	border: 2px solid;
+ 	border-collapse: collapse;
+ }
+
+ .content table{
+ 	width:50%;
+ 	margin-top: 50px;
+ }
+
+ .content td{
+ 	padding: 0;
+ }
+
 .halftone{
 	position: fixed;
 	width: 800px;
@@ -87,5 +101,7 @@ body{
 
 @media (max-width: 1000px) {
 
-	
+	.content table{
+	 	width: 70%;
+	 }
 }
