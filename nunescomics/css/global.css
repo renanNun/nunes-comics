@@ -7,8 +7,49 @@
     --dark-teal: #415A60;
 }
 
-html, body {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: var(--blue);
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 15px;
+    height: 10px;
+}
+    
+::-webkit-scrollbar-track {
+    background: #000;
+}
+    
+::-webkit-scrollbar-thumb {
+    background: var(--blue);
+    border: 2.5px solid #000;
+}
+
+@media (max-width: 1080px) {
+    html {
+      font-size: 93.75%;  /* 15px */
+    }
+}
+  
+@media (max-width: 720px) {
+    html {
+        font-size: 87.5%; /* 14px */
+    }
 }
