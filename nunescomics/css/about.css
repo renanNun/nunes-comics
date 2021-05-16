@@ -126,6 +126,12 @@ main {
 
 @media (max-width: 1000px) {
 
+
+    .info {
+      margin: 3rem 0;
+      padding: 2rem;
+   }
+   
 	  .info .content table{
 	 	display: none;
 	 }
@@ -142,4 +148,11 @@ main {
 	 	border: 2px solid;
 	 	width: 80%;
 	 }
+}
+
+@media (max-width: 720px) {
+  .info {
+      margin: 2rem 0;
+      padding: 1rem;
+   }
 }
