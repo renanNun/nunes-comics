@@ -79,19 +79,19 @@ main {
  }
 
 .imagem1{
-   background: url(../img/fundadores.jpg) no-repeat;
+   background: url(../images/fundadores.jpg) no-repeat;
    width: 70%;
    background-size: cover;
 }
 
 .imagem2{
-   background: url(../img/acervo.jpg) no-repeat;
+   background: url(../images/acervo.jpg) no-repeat;
    width: 30%;
    background-size: cover;
 }
 
 .imagem3{
-   background: url(../img/fundadoresAtual.jpg) no-repeat;
+   background: url(../images/fundadoresAtual.jpg) no-repeat;
    width: 30%;
    background-size: cover;
 }
@@ -125,7 +125,6 @@ main {
 }
 
 @media (max-width: 1000px) {
-
 
     .info {
       margin: 3rem 0;
