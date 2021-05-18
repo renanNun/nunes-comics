@@ -74,6 +74,14 @@ main {
     padding: .7rem;
     margin-left: 1rem;
     cursor: pointer;
+    background: var(--blue);
+    border: 1px solid black;
+
+    transition: transform 0.2s ease;
+  }
+
+  .info button:hover {
+    transform: scale(1.05, 1.05);
   }
   
   
