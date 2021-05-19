@@ -1,0 +1,17 @@
+.halftone {
+  position: fixed;
+  width: 800px;
+  z-index: -1;
+}
+
+.halftone.bottom {
+  bottom: -560px;
+  left: -70px;
+  transform: rotate(10deg);
+}
+
+.halftone.top {
+  top: -420px;
+  right: -510px;
+  transform: rotate(210deg);
+}
