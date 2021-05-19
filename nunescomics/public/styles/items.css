@@ -1,0 +1,311 @@
+/* search ------------------------------------------------------------------- */
+.search {
+  position: relative;
+  width: 360px;
+  height: 60px;
+  background: var(--yellow);
+  border-radius: 60px;
+  transition: 0.5s;
+  box-shadow: 0 5px 10px 5px rgba(0,0,0,0.2);
+  overflow: hidden;
+
+  border: 2px solid #000;
+}
+
+.search.active {
+  width: 360px;
+}
+
+@media (max-width: 952px) {
+  .search {
+    width: 60px;
+  }
+}
+
+.search .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background: var(--yellow);
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* ícone da lupa */
+.search .icon::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 3px solid #000;
+  border-radius: 50%;
+  transform: translate(-4px,-4px);
+}
+
+.search .icon::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 12px;
+  background: #000;
+  transform: translate(6px,6px) rotate(315deg);
+}
+
+.search .input {
+  position: relative;
+  width: 300px;
+  height: 60px;
+  left: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search .input input {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  pad: 10px 0;
+  background: var(--yellow);
+}
+
+.search .input input::placeholder {
+  color: #000;
+}
+
+.clear {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  right: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clear::before {
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 100%;
+  background: #000;
+  transform: rotate(45deg);
+}
+.clear::after {
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 100%;
+  background: #000;
+  transform: rotate(-45deg);
+}
+
+/* categories --------------------------------------------------------------- */
+section {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 8rem auto;
+}
+
+section header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+@media (max-width: 952px) {
+  section header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  section header .categories {
+    order: 2;
+  }
+
+  section header .search {
+    order: 1;
+  }
+
+  section header div:nth-child(2) {
+    margin-bottom: 2rem;
+  }
+
+  .search.active {
+    width: 80%;
+  }
+}
+
+section .categories ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+section .categories ul li {
+  list-style: none;
+  background: var(--yellow);
+  padding: 12px 20px;
+  margin: 20px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border: 2px solid #000;
+  box-shadow: 0 5px 10px 5px rgba(0,0,0,0.2);
+}
+
+section .categories ul li.active {
+  background: #000;
+  color: var(--yellow);
+  border: 2px solid var(--yellow);
+}
+
+/* products ----------------------------------------------------------------- */
+.products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.products .itemBox {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  margin: 1rem;
+  display: block;
+  border: 2px solid #000;
+}
+
+/* remover classe hide (usada para a query com JavaScript) */
+.products .itemBox.hide {
+  display: none;
+}
+
+.products .itemBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* product details ---------------------------------------------------------- */
+.itemBox {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 30px 0;
+  background: #000;
+  box-shadow: 0 30px 30px rgba(0,0,0,0.5);
+}
+
+.itemBox .imgBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.itemBox .imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.itemBox:hover .imgBox img {
+  opacity: 0;
+}
+
+.itemBox .details {
+  position: absolute;
+  bottom: 20px;
+  left: 10%;
+  width: 80%;
+  height: 70px;
+  background: var(--yellow);
+  border: 2px solid #000;
+  transition: 0.5s;
+  overflow: hidden;
+  text-align: center;
+
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.itemBox:hover .details {
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  line-height: 1.5rem;
+}
+
+.itemBox .details h3 {
+  margin-bottom: 1rem;
+  padding: 0;
+  font-size: 1.25em;
+  letter-spacing: 0.1rem;
+}
+
+.itemBox .details p {
+  margin: 10px 0 0;
+  padding: 0;
+  opacity: 0;
+  line-height: 1.2em;
+  transition: 0.5s;
+  text-align: left;
+}
+
+.itemBox .details p span {
+  text-decoration: underline;
+  font-size: 1.1rem;
+}
+
+.itemBox:hover .details p {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+
+/* page halftone details ---------------------------------------------------- */
+.halftone {
+  position: fixed;
+  width: 800px;
+  z-index: -1;
+}
+
+.halftone.bottom {
+  bottom: -560px;
+  left: -70px;
+  transform: rotate(10deg);
+}
+
+.halftone.top {
+  top: -420px;
+  right: -510px;
+  transform: rotate(210deg);
+}
