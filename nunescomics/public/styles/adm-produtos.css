@@ -1,3 +1,8 @@
+:root{
+	--corDoFundo: #ffffff;
+	--corSecundaria: #c9c3c3;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -8,30 +13,31 @@ main {
 .info {
   margin: 8rem 0;
   width: 70vw;
+  color: var(--corSecundaria);
 }
 
 .info h1{
-	color: #c9c3c3;
+	color: var(--corSecundaria);
 }
 
 .info button{
-	border: 1px solid #c9c3c3;
-	color: #c9c3c3;
-	background-color: #ffffff;
+	border: 1px solid var(--corSecundaria);
+	color: var(--corSecundaria);
+	background-color: var(--corDoFundo);
 	width: 70px;
 	height: 30px;
 	border-radius: 5px;
 }
 
 .info .content{
-	border: 1px solid #c9c3c3;
+	border: 1px solid var(--corSecundaria);
 	border-radius: 5px;
 }
 
 .info .content .item{
 	border-bottom: solid;
 	border-bottom-width: 1px;
-	border-bottom-color: #c9c3c3;
+	border-bottom-color: var(--corSecundaria);
 	padding: 0.5rem;
 	display: flex;
 	justify-content: space-between;
@@ -44,14 +50,16 @@ main {
 	margin-bottom: 1rem;
 }
 
-
+.info button:hover{
+	cursor: pointer;
+}
 .gambiarra button{
-	border: 1px solid #ffffff;
-	color: #ffffff;
+	border: 1px solid var(--corDoFundo);
+	color: var(--corDoFundo);
 }
 
 body {
-  background: #ffffff;
+  background: var(--corDoFundo);
 }
 
 @media (max-width: 1080px) {

@@ -14,6 +14,15 @@
 		<link rel="stylesheet" href="../public/styles/adm-produtos.css">
 
 		<title>Admin | Nunes' Comics</title>
+
+
+		<script type="text/javascript">
+			function excluir(){
+			 if (confirm("Esta ação é permanente. Deseja mesmo excluir?"))
+			 	alert("Excluído com sucesso!");
+			}
+		</script>
+
 	</head>
 
 	<body>
@@ -29,7 +38,7 @@
 
 		    	<div class="titulo">
 		    		<h1>Produtos</h1>
-		    		<button type="button">Novo</button>
+		    		<a href=""><button type="button">Novo</button></a>
 		    	</div>
 
 		    	<div class="content">
@@ -48,9 +57,9 @@
 			    		<div>01</div>
 			    		<div>Livro Justiceiro - No Princípio</div>
 			    		<div class="botoes">
-			    			<button type="button">Visualizar</button>
-			    			<button type="button">Editar</button>
-			    			<button type="button">Excluir</button>
+			    			<a href=""><button type="button">Visualizar</button></a>
+			    			<a href=""><button type="button">Editar</button></a>
+			    			<button type="button" onclick="excluir();">Excluir</button>
 			    		</div>
 		    		</div>
 
@@ -58,9 +67,9 @@
 			    		<div>02</div>
 			    		<div>Livro Justiceiro</div>
 			    		<div class="botoes">
-			    			<button type="button">Visualizar</button>
-			    			<button type="button">Editar</button>
-			    			<button type="button">Excluir</button>
+			    			<a href=""><button type="button">Visualizar</button></a>
+			    			<a href=""><button type="button">Editar</button></a>
+			    			<button type="button" onclick="">Excluir</button>
 			    		</div>
 		    		</div>	
 		    		
