@@ -1,6 +1,9 @@
 :root{
-	--corDoFundo: #ffffff;
+	--corDoFundo: #42AFC9;
 	--corSecundaria: black;
+	--corBotao: black;
+	--corTitulo: #F9E757;
+
 }
 
 main {
@@ -11,128 +14,68 @@ main {
 
 
 /* other info --------------------------------------------------------------- */
-.info {
+.container {
   margin: 8rem 0;
   width: 70vw;
   color: var(--corSecundaria);
 }
 
-.info h1{
-	color: var(--corSecundaria);
+.container h1{
+	color: var(--corTitulo);
+	-webkit-text-stroke-width: 1.5px; /* largura da borda */
+    -webkit-text-stroke-color: #000;
 }
 
-.info button{
-	border: 1px solid var(--corSecundaria);
-	color: var(--corSecundaria);
-	background-color: var(--corDoFundo);
+.container button{
+	border: 1.5px solid var(--corSecundaria);
+	color: white;
+	background-color: var(--corBotao);
 	width: 70px;
 	height: 30px;
 	border-radius: 5px;
 }
 
-.info .content{
-	border: 1px solid var(--corSecundaria);
+.container table tr{
+	border: 1.5px solid var(--corSecundaria);
 	border-radius: 5px;
+	background-color: white;
 }
 
-.info .content .item{
-	border-bottom: solid;
-	border-bottom-width: 1px;
-	border-bottom-color: var(--corSecundaria);
-	padding: 0.5rem;
-	display: flex;
-	justify-content: space-between;
-	line-height: 30px;
-}
-
-.info .titulo{
+.container .titulo{
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 1rem;
 }
 
-.info button:hover{
-	cursor: pointer;
+
+/* page halftone details ---------------------------------------------------- */
+.halftone {
+  position: fixed;
+  width: 800px;
+  z-index: -1;
 }
 
-.gambiarra button{
-	border: 1px solid var(--corDoFundo);
-	color: var(--corDoFundo);
+.halftone.bottom {
+  bottom: -560px;
+  left: -70px;
+  transform: rotate(10deg);
 }
 
-
-/* other addProduto --------------------------------------------------------------- */
-.addProduto{
-	background-color: var(--corDoFundo);
-	width: 50vw;
-	position: absolute;
-	margin: 8rem 0;
-	border: 1px solid var(--corSecundaria);
-	border-radius: 5px;
-	visibility: hidden;
-	text-align: right;
-	color: var(--corSecundaria);
-}
-
-.addProduto .fa-times{
-	color: var(--corSecundaria);
-	padding: 0.5rem;
-}
-
-.addProduto .fa-times:hover{
-	cursor: pointer;
-}
-
-.addProduto form{
-	text-align: center;
-}
-
-.addProduto .botoes{
-	border: 1px solid var(--corSecundaria);
-	color: var(--corSecundaria);
-	background-color: var(--corDoFundo);
-	width: 70px;
-	height: 30px;
-	border-radius: 5px;
-	margin-bottom: 1rem;
-}
-
-.addProduto .botoes:hover{
-	cursor:pointer;
-}
-
-.addProduto .item{
-	padding: 1rem;
+.halftone.top {
+  top: -420px;
+  right: -510px;
+  transform: rotate(210deg);
 }
 
 
-body {
+body{
   background: var(--corDoFundo);
+  font-family: 'Bangers', cursive;
 }
 
-@media (max-width: 1080px) {
-  .content .item .botoes{
-  	display: flex;
-  	flex-direction: column;
-  }
-
-  .addProduto{
-  	width: 70vw;
-  }
-
-  .addProduto .item{
-	padding: 0.5rem;
-  }
-}
 
 @media (max-width: 720px) {
-
-  .item div{
-	padding: 0.5rem;
-  }
-
-  .addProduto #imagem{
-  	font-size: 75%;
-  }
-
+	.container h1{
+		font-size: 25px;
+	}
 }
