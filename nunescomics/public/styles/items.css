@@ -96,23 +96,6 @@
   align-items: center;
 }
 
-.clear::before {
-  position: absolute;
-  content: '';
-  width: 1px;
-  height: 100%;
-  background: #000;
-  transform: rotate(45deg);
-}
-.clear::after {
-  position: absolute;
-  content: '';
-  width: 1px;
-  height: 100%;
-  background: #000;
-  transform: rotate(-45deg);
-}
-
 /* categories --------------------------------------------------------------- */
 section {
   width: 80%;
