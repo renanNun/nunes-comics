@@ -26,7 +26,7 @@ h1{
 
 .tela-login{
 	width: 360px;
-	background: white;
+	background: #F9E757 ;
 	border-radius: 20% 0;
 	box-shadow: 1px 2px 10px #0B0C10, 3px 6px 20px #0B0C10;
 	padding: 50px 20px;
@@ -90,7 +90,7 @@ button{
 }
 
 button:hover{
-	background: #F9E757;
+	background: #32C5E7;
 }
 
 .center{
@@ -105,4 +105,22 @@ a{
 
 a:hover{
 	color:#32C5E7;
+}
+
+.halftone{
+	position: fixed;
+	width: 800px;
+	z-index: -1;
+}
+
+.halftone.bottom{
+	bottom: -560px;
+	left: -70px;
+	transform: rotate(10deg);
+}
+
+.halftone.top{
+	top: -420px;
+	right: -510px;
+	transform: rotate(210deg);
 }
