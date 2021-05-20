@@ -236,6 +236,10 @@ section .categories ul li.active {
   overflow: hidden;
   text-align: center;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   padding: 15px;
   box-sizing: border-box;
 }
@@ -248,30 +252,42 @@ section .categories ul li.active {
   line-height: 1.5rem;
 }
 
-.itemBox .details h3 {
+.itemBox .details .info h3 {
   margin-bottom: 1rem;
   padding: 0;
   font-size: 1.25em;
   letter-spacing: 0.1rem;
 }
 
-.itemBox .details p {
+.itemBox .details .info p {
   margin: 10px 0 0;
   padding: 0;
   opacity: 0;
-  line-height: 1.2em;
+  line-height: 1.5em;
   transition: 0.5s;
   text-align: left;
 }
 
-.itemBox .details p span {
+.itemBox .details .info p span {
   text-decoration: underline;
   font-size: 1.1rem;
+  margin-right: 0.5rem;
 }
 
-.itemBox:hover .details p {
+.itemBox:hover .details .info p {
   opacity: 1;
   transition-delay: 0.3s;
+}
+
+.itemBox .details a {
+  color: #000;
+  border: 2px solid #000;
+}
+
+.itemBox .details a:hover {
+  text-decoration: none;
+  background: #000;
+  color: var(--yellow);
 }
 
 /* page halftone details ---------------------------------------------------- */
