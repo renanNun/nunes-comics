@@ -3,10 +3,18 @@ function excluir(){
 		alert("Excluído com sucesso!");
 }
 
-function addProduto(){
-	document.getElementById("addProduto").style.visibility = "visible";
-}
+function formatarMoeda() {
+	var elemento = document.getElementById('precoProduto');
+	var valor = elemento.value;
+		  
+	valor = valor + '';
+	valor = parseInt(valor.replace(/[\D]+/g,''));
+	valor = valor + '';
+	valor = valor.replace(/([0-9]{2})$/g, ",$1");
 
-function fecharJanela(el){
-	document.getElementById(el).style.visibility = "hidden";
+	if (valor.length > 6) {
+		valor = valor.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
+	}
+
+	elemento.value = valor;
 }
