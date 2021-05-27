@@ -273,9 +273,12 @@ section .categories ul li.active {
 }
 
 .itemBox .details .info p span {
-  text-decoration: underline;
+  color: var(--blue);
   font-size: 1.1rem;
-  margin-right: 0.5rem;
+  margin-right: 0.25rem;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #000;
+
 }
 
 .itemBox:hover .details .info p {
