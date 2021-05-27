@@ -1,0 +1,85 @@
+body {
+  min-height: 100vh;
+}
+
+.container {
+  width: 60%;
+  height: 75vh;
+  padding: 2rem;
+  margin: auto;
+  margin-top: 10rem;
+  margin-bottom: 8rem;
+  
+  background: var(--yellow);
+  border: 2px solid #000;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.container .info {
+  display: flex;
+  justify-content: space-around;
+  height: 80%;
+}
+
+.container .info .image {
+  width: 35%;
+}
+
+.container .info .image img {
+  height: 100%;
+  width: 100%;
+  border: 2px solid #000;
+}
+
+.container .info .details {
+  width: 55%;
+  padding: 2rem;
+  line-height: 1rem;
+}
+
+.container .info .details h3 {
+  font-size: 2.5rem;
+  letter-spacing: 0.3rem;
+  margin-bottom: 3rem;
+}
+
+.container .info .details p {
+  font-size: 1rem;
+  margin-bottom: 1.3rem;
+}
+
+.container .actions {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 20%;
+}
+
+.container .actions button {
+  padding: 1rem 2rem;
+  background: var(--blue);
+  color: var(--black);
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+/* page halftone details ---------------------------------------------------- */
+.halftone {
+  position: fixed;
+  width: 800px;
+  z-index: -1;
+}
+
+.halftone.bottom {
+  bottom: -560px;
+  left: -70px;
+  transform: rotate(10deg);
+}
+
+.halftone.top {
+  top: -420px;
+  right: -510px;
+  transform: rotate(210deg);
+}
