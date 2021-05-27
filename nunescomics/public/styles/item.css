@@ -88,7 +88,7 @@ body {
     flex-direction: column;
     justify-content: space space-around;
     width: 90%;
-    padding: 2.5rem;
+    padding: 2.5rem 1rem;
     height: auto;
   }
 
@@ -116,7 +116,8 @@ body {
   }
 
   .container .info .image {
-    display: none;
+    height: 300px;
+    width: 200px;
   }
 
   .container .actions {
