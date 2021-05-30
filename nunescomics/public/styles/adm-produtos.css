@@ -20,13 +20,13 @@ main {
   color: var(--corSecundaria);
 }
 
-.container h1{
+.container h1 {
 	color: var(--corTitulo);
 	-webkit-text-stroke-width: 1.5px; /* largura da borda */
     -webkit-text-stroke-color: #000;
 }
 
-.container button{
+.container button {
 	border: 1.5px solid var(--corSecundaria);
 	color: white;
 	background-color: var(--corBotao);
@@ -36,28 +36,28 @@ main {
 	transition: 0.5s;
 }
 
-.container button:hover{
+.container button:hover {
 	background-color: var(--yellow);
 	color: var(--black);
 }
 
-.container .botoes{
+.container .botoes {
 	display: flex;
 	justify-content: flex-end;
 	margin-left: 10px;
 }
 
-.container table thead tr{
+.container table thead tr {
 	background-color: black;
 	color: white;
 }
 
-.container table tr{
+.container table tr {
 	border: 1.5px solid var(--corSecundaria);
 	background-color: white;
 }
 
-.container .titulo{
+.container .titulo {
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 1rem;
@@ -85,7 +85,7 @@ main {
 }
 
 
-body{
+body {
   background: var(--corDoFundo);
   font-family: 'Bangers', cursive;
 }
@@ -94,5 +94,11 @@ body{
 @media (max-width: 720px) {
 	.container h1{
 		font-size: 25px;
+	}
+}
+
+@media (max-width: 450px) {
+	.container {
+		width: 90vw;
 	}
 }
