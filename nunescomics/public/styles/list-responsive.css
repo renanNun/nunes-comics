@@ -1,0 +1,25 @@
+
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5%; /* 14px */
+  }
+
+  .container {
+    margin-left: 1rem;
+    padding: 1rem;
+    height: 50%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 87.5%; /* 14px */
+  }
+
+  .container {
+    margin: 250px 0px 0px 10px; /* top, right, bottom, and left */
+    height: 100%;
+    width: 100%;
+  }
+}
