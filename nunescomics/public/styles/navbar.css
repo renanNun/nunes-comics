@@ -7,17 +7,30 @@
 }
 
 nav {
+<<<<<<< HEAD
+=======
+  position: fixed;
+  top: 0;
+  z-index: 10;
+>>>>>>> main
   background: var(--yellow);
   height: 80px;
   width: 100%;
   box-shadow: 0 5px 5px 5px rgba(0,0,0,0.2);
+<<<<<<< HEAD
   margin-bottom: 8rem;
+=======
+>>>>>>> main
   border-bottom: 2px solid #000;
 }
 
 label.logo {
   line-height: 80px;
+<<<<<<< HEAD
   padding: 0 100px;
+=======
+  padding-left: 100px;
+>>>>>>> main
   font-weight: bold;
 }
 
@@ -44,9 +57,14 @@ nav ul li a {
   text-transform: uppercase;
 }
 
+<<<<<<< HEAD
 a.active,a:hover {
   color: var(--teal);
   text-decoration: underline;
+=======
+nav ul li a.active,a:hover {
+  color: var(--teal);
+>>>>>>> main
   transition: .2s;
 }
 
@@ -75,6 +93,13 @@ a.active,a:hover {
   }
 }
 @media (max-width: 858px) {
+<<<<<<< HEAD
+=======
+  label.logo {
+    padding-left: 25px;
+  }
+
+>>>>>>> main
   .checkbtn {
     display: block;
   }
@@ -87,13 +112,21 @@ a.active,a:hover {
   nav ul {
     position: fixed;
     width: 100%;
+<<<<<<< HEAD
     height: 100vh;
+=======
+    height: 90vh;
+>>>>>>> main
     background: var(--dark-teal);
     top: 80px;
     left: -100%;
     text-align: center;
     transition: all .5s;
     z-index: 10;
+<<<<<<< HEAD
+=======
+    overflow-y: scroll;
+>>>>>>> main
   }
 
   nav ul li {
@@ -106,12 +139,32 @@ a.active,a:hover {
     font-size: 1.5rem;
   }
 
+<<<<<<< HEAD
   a:hover,a.active {
+=======
+  nav ul li a:hover {
+>>>>>>> main
     background: none;
+    color: #fff;
+  }
+
+<<<<<<< HEAD
+  #check:checked ~ ul {
+    left: 0;
+  }
+=======
+  nav ul li a.active {
     color: #fff;
   }
 
   #check:checked ~ ul {
     left: 0;
   }
+}
+
+@media (max-width: 200px) {
+  label.logo {
+    display: none;
+  }
+>>>>>>> main
 }
