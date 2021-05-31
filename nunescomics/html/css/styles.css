@@ -126,10 +126,10 @@ a:hover{
 	transform: rotate(210deg);
 }
 
-@media (max-width: 1000px){
+@media screen and (orientation: portrait){
 
 	.tela-login{
-		width: 90%;
+		width: 100%;
 		padding: 50px 20px 50px 20px ;
 	}
 	
@@ -138,7 +138,7 @@ a:hover{
 	}
 	
 	input{
-		width: 100%;
+		width: 90%;
 		height: 192px;
 		font-size: 50px;
 		background:transparent;
@@ -167,3 +167,4 @@ a:hover{
 	}
 	
 	}
+
