@@ -1,0 +1,157 @@
+body {
+  min-height: 100vh;
+}
+
+.container {
+  width: 60%;
+  height: 75vh;
+  padding: 2rem;
+  margin: auto;
+  margin-top: 10rem;
+  margin-bottom: 8rem;
+  
+  background: var(--yellow);
+  border: 2px solid #000;
+
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 10px 5px rgba(0,0,0,0.25);
+}
+
+.container .info {
+  display: flex;
+  justify-content: space-around;
+  height: 80%;
+}
+
+.container .info .image {
+  width: 35%;
+}
+
+.container .info .image img {
+  height: 100%;
+  width: 100%;
+  border: 2px solid #000;
+}
+
+.container .info .details {
+  width: 55%;
+  padding: 2rem;
+  line-height: 1rem;
+}
+
+.container .info .details h3 {
+  font-size: 2.5rem;
+  letter-spacing: 0.3rem;
+  margin-bottom: 3rem;
+}
+
+.container .info .details p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.container .info .details p:last-child {
+  margin-bottom: 0;
+}
+
+.container .info .details p span {
+  font-size: 1.25rem;
+  color: var(--blue);
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #000;
+}
+
+.container .actions {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 20%;
+}
+
+.container .actions button {
+  padding: 1rem 2rem;
+  background: var(--blue);
+  color: var(--black);
+  border: 1px solid #000;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+.container .actions button:hover {
+  transform: scale(1.05, 1.05);
+}
+
+@media (max-width: 952px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space space-around;
+    width: 90%;
+    padding: 2.5rem 1rem;
+    height: auto;
+  }
+
+  .container .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container .info .details {
+    width: 100%;
+  }
+
+  .container .info .details h3 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .container .info .details p {
+    line-height: 1.5rem;
+  }
+
+  .container.info .details p span {
+    font-size: 0.625rem;
+  }
+
+  .container .info .image {
+    height: 300px;
+    width: 200px;
+  }
+
+  .container .actions {
+    height: stretch;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .container .actions button {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 952px) {
+  .container .info .details h3 {
+    font-size: 2rem;
+  }
+}
+
+/* page halftone details ---------------------------------------------------- */
+.halftone {
+  position: fixed;
+  width: 800px;
+  z-index: -1;
+}
+
+.halftone.bottom {
+  bottom: -560px;
+  left: -70px;
+  transform: rotate(10deg);
+}
+
+.halftone.top {
+  top: -420px;
+  right: -510px;
+  transform: rotate(210deg);
+}
