@@ -1,7 +1,10 @@
+<<<<<<< HEAD
+=======
 main {
   margin-top: 10rem;
 }
 
+>>>>>>> main
 /* search ------------------------------------------------------------------- */
 .search {
   position: relative;
@@ -100,6 +103,26 @@ main {
   align-items: center;
 }
 
+<<<<<<< HEAD
+.clear::before {
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 100%;
+  background: #000;
+  transform: rotate(45deg);
+}
+.clear::after {
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 100%;
+  background: #000;
+  transform: rotate(-45deg);
+}
+
+=======
+>>>>>>> main
 /* categories --------------------------------------------------------------- */
 section {
   width: 80%;
@@ -240,10 +263,13 @@ section .categories ul li.active {
   overflow: hidden;
   text-align: center;
 
+<<<<<<< HEAD
+=======
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
+>>>>>>> main
   padding: 15px;
   box-sizing: border-box;
 }
@@ -256,22 +282,42 @@ section .categories ul li.active {
   line-height: 1.5rem;
 }
 
+<<<<<<< HEAD
+.itemBox .details h3 {
+=======
 .itemBox .details .info h3 {
+>>>>>>> main
   margin-bottom: 1rem;
   padding: 0;
   font-size: 1.25em;
   letter-spacing: 0.1rem;
 }
 
+<<<<<<< HEAD
+.itemBox .details p {
+  margin: 10px 0 0;
+  padding: 0;
+  opacity: 0;
+  line-height: 1.2em;
+=======
 .itemBox .details .info p {
   margin: 10px 0 0;
   padding: 0;
   opacity: 0;
   line-height: 1.5em;
+>>>>>>> main
   transition: 0.5s;
   text-align: left;
 }
 
+<<<<<<< HEAD
+.itemBox .details p span {
+  text-decoration: underline;
+  font-size: 1.1rem;
+}
+
+.itemBox:hover .details p {
+=======
 .itemBox .details .info p span {
   color: var(--blue);
   font-size: 1.1rem;
@@ -282,10 +328,13 @@ section .categories ul li.active {
 }
 
 .itemBox:hover .details .info p {
+>>>>>>> main
   opacity: 1;
   transition-delay: 0.3s;
 }
 
+<<<<<<< HEAD
+=======
 .itemBox .details a {
   color: #000;
   border: 2px solid #000;
@@ -297,6 +346,7 @@ section .categories ul li.active {
   color: var(--yellow);
 }
 
+>>>>>>> main
 /* page halftone details ---------------------------------------------------- */
 .halftone {
   position: fixed;

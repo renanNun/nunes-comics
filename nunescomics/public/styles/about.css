@@ -10,7 +10,11 @@ main {
 
 /* other info --------------------------------------------------------------- */
 .info {
+<<<<<<< HEAD
+  margin: 8rem 0;
+=======
   margin: 12rem 0 8rem;
+>>>>>>> main
   width: 70vw;
   padding: 5rem;
 

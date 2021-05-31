@@ -1,0 +1,127 @@
+html,body{
+	margin: 0;
+	padding: 0;
+}
+
+header{
+	position: fixed;
+	background: #F9E757;
+	padding: 20px;
+	width: 100%;
+	height: 30px;
+}
+
+.area-esquerda h3{
+	font-family: 'Bangers', cursive;
+	margin: 0;
+	text-transform: uppercase;
+	font-size: 30px;
+	font-weight: 900;
+
+}
+
+.logout_bnt{
+	padding: 5px;
+	background:#4E6B71;
+	text-decoration: none;
+	float: right;
+	margin-top: -30px;
+	margin-right: 40px;
+	font-size: 22px;
+	border-radius: 10px;
+	font-weight: 600;
+	color: #F9EBEB;
+	transition: 0.5s;
+	transition-property: background;
+}
+
+.logout_bnt:hover{
+	background: #32C5E7;
+}
+
+.sidebar{
+	background: #fde31fa2;
+	margin-top: 70px;
+	padding-top: 30px;
+	position: fixed;
+	left: 0;
+	width: 250px;
+	height: 100%;
+	transition: 0.5s;
+	transition-property: left;
+}
+
+.sidebar .profile-pic{
+	width: 100px;
+	height: 100px;
+	margin-bottom: 10px;
+}
+
+.sidebar a{
+	color: black;
+	display: block;
+	width: 100%;
+	line-height: 60px;
+	font-size: 22px;
+	text-decoration: none;
+	padding-left: 40px;
+	box-sizing: border-box;
+	margin-top: 5px;
+	transition: 0.5s;
+	transition-property: background;
+}
+
+.sidebar a:hover{
+	background: #32C5E7;
+}
+
+.sidebar i{
+	padding-right: 10px;
+}
+
+label #sidebar_bnt{
+	z-index: 1;
+	color: black;
+	position: fixed;
+	cursor: pointer;;
+	left: 300px;
+	font-size: 20px;
+	margin: 5px 0;
+	transition: 0.5s;
+	transition-property: color;
+}
+
+label #sidebar_bnt:hover{
+	color:#32C5E7;
+}
+
+#check:checked ~ .sidebar{
+	left: -200px;
+}
+
+#check:checked ~ .sidebar a span{
+	display: none;
+}
+
+#check:checked ~ .sidebar a{
+	font-size: 20px;
+	margin-left: 170px;
+	width: 80px;
+}
+
+.content{
+	margin-left: 260px;
+	background-position: center;
+	background-size: cover;
+	height: 100vh;
+	transition: 0.5s
+	transition-property:margin-left;
+}
+
+#check:checked ~ .content{
+	margin-left: 60px;
+}
+
+#check{
+	display: none;
+}
