@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+:root {
+  --yellow: #F9E757;
+  --blue: #42AFC9;
+  --pink: #FCD2D2;
+  --black: #0B0C10;
+  --teal: #4E6B71;
+  --dark-teal: #415A60;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 15px;
+  height: 10px;
+}
+   
+::-webkit-scrollbar-track {
+  background: #000;
+}
+   
+::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  border: 2.5px solid #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Bangers', sans-serif;
+}
+
+body {
+  background: var(--blue);
+  width: auto;
+}
