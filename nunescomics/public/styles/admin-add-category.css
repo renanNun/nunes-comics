@@ -1,0 +1,129 @@
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	color: var(--black);
+}
+
+main .container {
+	width: 50vw;
+	padding: 2rem;
+	background-color: var(--yellow);
+	border: 2px solid var(--black);
+	box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.25);
+}
+
+main .container form fieldset {
+	border: none;
+	padding-top: 1.5rem;
+}
+
+main .container form fieldset .form-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.2rem;
+}
+
+main .container form fieldset .form-item .input-container {
+	position: relative;
+	width: 60%;
+	height: 2.5rem;
+	margin-left: 0.5rem;
+}
+
+main .container form fieldset .form-item input[type="text"] {
+	width: 100%;
+	height: 100%;	
+	padding: 0.5rem;
+
+	border-radius: 0.4rem;
+	border: 1px solid #c9c9c1;
+	font-size: 1rem;
+	outline: none;
+}
+
+main .container form fieldset .form-item .input-container:focus-within::after {
+	content: '';
+	position: absolute;
+	left: 0.6rem;
+	right: 0.6rem;
+	bottom: 0;
+
+	width: calc(100% - 1.2rem);
+	height: 2px;
+
+	background-color: var(--blue);
+}
+
+main .container form fieldset #form-button {
+	margin-top: 1.2rem;
+}
+
+main .container form fieldset #form-button button {
+	width: 6rem;
+	height: 2.25rem;
+	font-size: 1rem;
+
+	background-color: var(--blue);
+	border: 1px solid var(--black);
+	cursor: pointer;
+
+	transition: 0.3s;
+}
+
+main .container form fieldset #form-button button:hover {
+	transform: scale(1.05);
+}
+
+/* page halftone details ---------------------------------------------------- */
+.halftone {
+  position: fixed;
+  width: 800px;
+  z-index: -1;
+}
+
+.halftone.bottom {
+  bottom: -560px;
+  left: -70px;
+  transform: rotate(10deg);
+}
+
+.halftone.top {
+  top: -420px;
+  right: -510px;
+  transform: rotate(210deg);
+}
+
+@media (max-width: 900px) {
+	main .container {
+		width: 60vw;
+	}
+}
+
+@media (max-width: 700px) {
+	main .container {
+		width: 70vw;
+	}
+
+	main .container form fieldset .form-item {
+		flex-direction: column;
+	}
+
+	main .container form fieldset .form-item .input-container {
+		width: 80%;
+		margin: 0;
+	}
+}
+
+@media (max-width: 500px) {
+	main .container {
+		width: 80vw;
+	}
+
+	main .container form fieldset .form-item .input-container {
+		width: 100%;
+	}
+}
