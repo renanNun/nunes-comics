@@ -19,7 +19,6 @@ function formatarMoeda() {
 	elemento.value = valor;
 }
 
-<<<<<<< HEAD
 function handleSelectImage(event) {
     if (!event.target.files.length) {
       	return;
@@ -30,7 +29,8 @@ function handleSelectImage(event) {
 	const imageContainer = document.querySelector("#image-container");
 
 	imageContainer.innerHTML = `<img src="${image}" alt="">`;
-=======
+}
+
 function fecharJanela(el){
 	document.getElementById(el).style.visibility = "hidden";
 }
@@ -72,5 +72,4 @@ function highlightPreviousButton() {
 			break;
 		}
 	}
->>>>>>> main
 }
