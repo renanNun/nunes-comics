@@ -34,6 +34,7 @@
       <div class="titulo d-flex justify-content-between align-items-center mb-3">
         <h1 class="mb-0">Usuários</h1>
         <a href="list-user.html" class="buttons">Voltar</a>
+        <a href="add-user.php" class="buttons">Adicionar</a>
       </div>
       <table class="table table-borderless mb-0 table-changes">
         <thead>

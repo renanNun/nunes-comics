@@ -38,10 +38,9 @@
 			</div>
 		</header>
   		<main class="d-flex justify-content-center">
-			
 			<div class="container">
-				<form class="form-info">
-					<div >
+				<form method="POST" action="">
+					<div>
 						<label>Nome: </label>
 						<input id="name" autofocus type="text" name="name" size="34" placeholder="Informe seu nome">
 					</div>
@@ -57,11 +56,13 @@
 					</div>
 
 					<div class="row-button">
+
 						<div>
 							<button class="button" type="reset" value="Resetar">
 								<span class="font-contact">Resetar</span>
 							</button>
 						</div>
+
 						<div >
 							<button type="submit" class="button" name="con-enviar" id="con-enviar">
 								<span class="font-contact">Cadastrar</span>
@@ -79,5 +80,4 @@
 			<img src="../../public/assets/halftone-effect.svg" alt="">
 		  </div>
 	</body>
-
 </html>

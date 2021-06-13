@@ -16,7 +16,7 @@
 
 	<!-- css -->
 	<link rel="stylesheet" href="../../../public/css/global.css">
-	<!-- <link rel="stylesheet" href="../../../public/css/adm-produtos-add.css"> -->
+
 	<link rel="stylesheet" href="../../../public/css/admin-add-produtos.css">
 
 	<title>Admin | Nunes' Comics</title>
@@ -34,7 +34,7 @@
 
 	<main>
 		<div class="container">
-			<form>
+			<form method="POST" action="/admin/list-user">
 				<fieldset>
 					<legend>Adicione um novo produto</legend>
 					<div class="form-item">
@@ -73,7 +73,7 @@
 					<div id="image-container" class="form-item"></div>
 
 					<div class="form-item form-buttons">
-						<button type="submit" value="save">Salvar</button>
+						<button type="submit" >Salvar</button>
 						<button type="reset" value="reset">Resetar</button>
 					</div>
 				</fieldset>
