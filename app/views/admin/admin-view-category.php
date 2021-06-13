@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="shortcut icon" href="../../../public/assets/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../../../public/assets//favicon.ico" type="image/x-icon">
 
   <!--icons -->
   <script src="https://kit.fontawesome.com/86afc28056.js" crossorigin="anonymous"></script>
@@ -32,147 +32,85 @@
   <main class="d-flex justify-content-center">
     <div class="container">
       <div class="titulo d-flex justify-content-between align-items-center mb-3">
-        <h1 class="mb-0">Categorias</h1>
-        <a href="./admin-add-category.html">
-          <button type="button">Novo</button>
-        </a>
+        <h1 class="mb-0">Marvel Comics</h1>
+        <!-- <?php if ($products) : ?>
+          <h1 class="mb-0"><?= $products[0]->category_name ?></h1>
+        <?php endif ?> -->
+        <button type="button">Novo</button>
       </div>
       <table class="table table-borderless mb-0 table-changes">
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Categoria</th>
+            <th scope="col">Produto</th>
             <th scope="col"></th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Marvel Comics</td>
-            <td class="d-flex justify-content-end flex-wrap">
-              <a href="./admin-view-category.html" class="mb-1">
-                <button type="button" >Visualizar</button>
-              </a>
-              <a href="./admin-edit-category.html">
+          <!-- <?php foreach ($products as $product) : ?>
+            <tr>
+              <th scope="row"><?= $product->product_id ?></th>
+              <td><?= $product->product_name ?></td>
+              <td class="d-flex justify-content-end flex-wrap">
+                <button type="button" class="mb-1">Visualizar</button>
                 <button type="button" class="ml-2 mb-1">Editar</button>
-              </a>
-              <button type="button" class="ml-2" onclick="excluir();">Excluir</button>
-            </td>
-          </tr>
+                <button type="button" class="ml-2" onclick="excluir();">Excluir</button>
+              </td>
+            </tr>
+          <?php endforeach; ?> -->
+
+
           <tr>
             <th scope="row">2</th>
-            <td>DC Comics</td>
+            <td>The once and future Thor</td>
             <td class="d-flex justify-content-end flex-wrap">
-              <a href="./admin-view-category.html">
-                <button type="button" class="mb-1">Visualizar</button>
-              </a>
-              <a href="./admin-edit-category.html">
-                <button type="button" class="ml-2 mb-1">Editar</button>
-              </a>
+              <button type="button" class="mb-1">Visualizar</button>
+              <button type="button" class="ml-2 mb-1">Editar</button>
               <button type="button" class="ml-2" onclick="excluir();">Excluir</button>
             </td>
           </tr>
           <tr>
             <th scope="row">3</th>
-            <td>Wolverine</td>
+            <td>Wolverine Vs. Spider-man</td>
             <td class="d-flex justify-content-end flex-wrap">
-              <a href="./admin-view-category.html">
-                <button type="button" class="mb-1">Visualizar</button>
-              </a>
-              <a href="./admin-edit-category.html">
-                <button type="button" class="ml-2 mb-1">Editar</button>
-              </a>
+              <button type="button" class="mb-1">Visualizar</button>
+              <button type="button" class="ml-2 mb-1">Editar</button>
               <button type="button" class="ml-2" onclick="excluir();">Excluir</button>
             </td>
           </tr>
           <tr>
             <th scope="row">4</th>
-            <td>Homem Aranha</td>
+            <td>Blazing mag</td>
             <td class="d-flex justify-content-end flex-wrap">
-              <a href="./admin-view-category.html">
-                <button type="button" class="mb-1">Visualizar</button>
-              </a>
-              <a href="./admin-edit-category.html">
-                <button type="button" class="ml-2 mb-1">Editar</button>
-              </a>
+              <button type="button" class="mb-1">Visualizar</button>
+              <button type="button" class="ml-2 mb-1">Editar</button>
               <button type="button" class="ml-2" onclick="excluir();">Excluir</button>
             </td>
           </tr>
           <tr>
             <th scope="row">5</th>
-            <td>Batman</td>
+            <td>The origin of the Silver Surfer</td>
             <td class="d-flex justify-content-end flex-wrap">
-              <a href="./admin-view-category.html">
-                <button type="button" class="mb-1">Visualizar</button>
-              </a>
-              <a href="./admin-edit-category.html">
-                <button type="button" class="ml-2 mb-1">Editar</button>
-              </a>
+              <button type="button" class="mb-1">Visualizar</button>
+              <button type="button" class="ml-2 mb-1">Editar</button>
               <button type="button" class="ml-2" onclick="excluir();">Excluir</button>
             </td>
           </tr>
           <tr>
             <th scope="row">6</th>
-            <td>Green Lantern</td>
+            <td>Living Legend</td>
             <td class="d-flex justify-content-end flex-wrap">
-              <a href="./admin-view-category.html">
-                <button type="button" class="mb-1">Visualizar</button>
-              </a>
-              <a href="./admin-edit-category.html">
-                <button type="button" class="ml-2 mb-1">Editar</button>
-              </a>
+              <button type="button" class="mb-1">Visualizar</button>
+              <button type="button" class="ml-2 mb-1">Editar</button>
               <button type="button" class="ml-2" onclick="excluir();">Excluir</button>
             </td>
           </tr>
           <tr>
             <th scope="row">7</th>
-            <td>Superman</td>
+            <td>Earth's Mightiest Hero</td>
             <td class="d-flex justify-content-end flex-wrap">
-              <a href="./admin-view-category.html">
-                <button type="button" class="mb-1">Visualizar</button>
-              </a>
-              <a href="./admin-edit-category.html">
-                <button type="button" class="ml-2 mb-1">Editar</button>
-              </a>
-              <button type="button" class="ml-2" onclick="excluir();">Excluir</button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">8</th>
-            <td>Green Arrow</td>
-            <td class="d-flex justify-content-end flex-wrap">
-              <a href="./admin-view-category.html">
-                <button type="button" class="mb-1">Visualizar</button>
-              </a>
-              <a href="./admin-edit-category.html">
-                <button type="button" class="ml-2 mb-1">Editar</button>
-              </a>
-              <button type="button" class="ml-2" onclick="excluir();">Excluir</button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">9</th>
-            <td>Thor</td>
-            <td class="d-flex justify-content-end flex-wrap">
-              <a href="./admin-view-category.html">
-                <button type="button" class="mb-1">Visualizar</button>
-              </a>
-              <a href="./admin-edit-category.html">
-                <button type="button" class="ml-2 mb-1">Editar</button>
-              </a>
-              <button type="button" class="ml-2" onclick="excluir();">Excluir</button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">10</th>
-            <td>Silver Surfer</td>
-            <td class="d-flex justify-content-end flex-wrap">
-              <a href="./admin-view-category.html">
-                <button type="button" class="mb-1">Visualizar</button>
-              </a>
-              <a href="./admin-edit-category.html">
-                <button type="button" class="ml-2 mb-1">Editar</button>
-              </a>
+              <button type="button" class="mb-1">Visualizar</button>
+              <button type="button" class="ml-2 mb-1">Editar</button>
               <button type="button" class="ml-2" onclick="excluir();">Excluir</button>
             </td>
           </tr>
@@ -206,10 +144,10 @@
   </main>
 
   <div class="halftone bottom">
-    <img src="../../../public/assets/halftone-effect.svg" alt="">
+    <img src="../../../public/assets//halftone-effect.svg" alt="">
   </div>
   <div class="halftone top">
-    <img src="../../../public/assets/halftone-effect.svg" alt="">
+    <img src="../../../public/assets//halftone-effect.svg" alt="">
   </div>
 
   <!--javascript -->

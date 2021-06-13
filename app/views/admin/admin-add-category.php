@@ -33,14 +33,14 @@
 
 	<main>
 		<div class="container">
-			<form>
+			<form action="/admin/categories/create" method="POST">
 				<fieldset>
-					<legend>Edite a categoria</legend>
+					<legend>Crie uma nova categoria</legend>
 
 					<div class="form-item">
 						<label for="category">Categoria:</label>
 						<div class="input-container">
-							<input id="category" type="text" name="category" value="nome">
+							<input id="category" type="text" name="name">
 						</div>
 					</div>
 
@@ -53,10 +53,10 @@
 	</main>
 
 	<div class="halftone bottom">
-		<img src="../../../public/assets/halftone-effect.svg" alt="">
+		<img src="../public/assets/halftone-effect.svg" alt="">
 	</div>
 	<div class="halftone top">
-		<img src="../../../public/assets/halftone-effect.svg" alt="">
+		<img src="../public/assets/halftone-effect.svg" alt="">
 	</div>
 
 </body>

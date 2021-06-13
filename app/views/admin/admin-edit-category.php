@@ -33,15 +33,16 @@
 
 	<main>
 		<div class="container">
-			<form>
+			<form action="/admin/categories/update" method="POST">
 				<fieldset>
-					<legend>Crie uma nova categoria</legend>
+					<legend>Edite a categoria</legend>
 
 					<div class="form-item">
 						<label for="category">Categoria:</label>
 						<div class="input-container">
-							<input id="category" type="text" name="category">
+							<input id="category" type="text" name="name" value="<?= $category->name ?>">
 						</div>
+						<input type="hidden" name="id" value=<?= $category->id ?>>
 					</div>
 
 					<div id="form-button" class="form-item">
@@ -53,10 +54,10 @@
 	</main>
 
 	<div class="halftone bottom">
-		<img src="../public/assets/halftone-effect.svg" alt="">
+		<img src="../../../public/assets/halftone-effect.svg" alt="">
 	</div>
 	<div class="halftone top">
-		<img src="../public/assets/halftone-effect.svg" alt="">
+		<img src="../../../public/assets/halftone-effect.svg" alt="">
 	</div>
 
 </body>
