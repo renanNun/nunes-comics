@@ -1,3 +1,4 @@
+<?php ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +20,7 @@
         <a href="./index.php"><img src="../../../public/assets/logo.png" alt=""></a>
       </label>
       <ul>
-        <li><a href="index">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="about">Quem Somos</a></li>
         <li><a href="items">Produtos</a></li>
         <li><a href="contact">Contato</a></li>

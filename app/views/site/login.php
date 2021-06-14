@@ -16,6 +16,10 @@
 	</head>
 
 <body>
+
+    <header>
+        <?php require('app/views/includes/header.php')?>
+    </header>
 		
      <div class="container-login">
 		
@@ -60,6 +64,10 @@
     <div class="halftone top">
         <img src="../../../public/assets/halftone-effect.svg" alt="">
     </div>
+
+    <footer>
+        <?php require('app/views/includes/footer.php')?>
+    </footer>
     
 </body>
 

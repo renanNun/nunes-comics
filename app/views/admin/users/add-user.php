@@ -31,7 +31,7 @@
 				</div>
 
 				<div class="space">
-					<a class="buttons" href="./view-users.html">
+					<a class="buttons" href="list">
 						Voltar
 					</a>
 				</div>
@@ -39,7 +39,7 @@
 		</header>
   		<main class="d-flex justify-content-center">
 			<div class="container">
-				<form method="POST" action="">
+				<form method="POST" action="list">
 					<div>
 						<label>Nome: </label>
 						<input id="name" autofocus type="text" name="name" size="34" placeholder="Informe seu nome">
@@ -53,6 +53,11 @@
 					<div >
 						<label id="password" for="password">Senha: </label>
 						<input id="password" type="password" name="password" placeholder="Informe sua senha">
+					</div>
+
+					<div >
+						<label id="pic" for="pic">Foto: </label>
+						<input id="pic" type="file" name="pic" placeholder="Insira a foto">
 					</div>
 
 					<div class="row-button">

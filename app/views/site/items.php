@@ -24,7 +24,7 @@
 <body>
 
   <header>
-    <?php require('../includes/header.php'); ?>
+    <?php require('app/views/includes/header.php'); ?>
   </header>
 
   <main>
@@ -252,7 +252,7 @@
   </script>
 
   <footer>
-  <?php require('../includes/footer.php'); ?>
+  <?php require('app/views/includes/footer.php'); ?>
   </footer>
 
 </body>

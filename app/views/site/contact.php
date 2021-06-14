@@ -23,7 +23,7 @@
 <body>
 
     <header>
-      <?php require('../includes/header.php'); ?>
+      <?php require('app/views/includes/header.php'); ?>
     </header>
     <main>
         <div class="page">
@@ -114,7 +114,7 @@
     </div>
 
     <footer>
-    <?php require('../includes/footer.php'); ?>
+    <?php require('app/views/includes/footer.php' ); ?>
     </footer>
 
     <!-- Mascara input Telefone -->

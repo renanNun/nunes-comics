@@ -20,21 +20,7 @@
 <body>
 
   <header>
-    <nav>
-      <input type="checkbox" id="check">
-      <label for="check" class="checkbtn">
-        <img src="../../../public/assets/hamburger-menu.svg" alt="">
-      </label>
-      <label class="logo">
-        <a href="./index.html"><img src="../../../public/assets/logo.png" alt=""></a>
-      </label>
-      <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./about.html">Quem Somos</a></li>
-        <li><a href="./items.html">Produtos</a></li>
-        <li><a href="./contato.html">Contato</a></li>
-      </ul>
-    </nav>
+    <?php require('app/views/includes/header.php') ?>
   </header>
 
   <main>
@@ -70,7 +56,7 @@
   </div>
 
   <footer>
-    
+      <?php require('app/views/includes/header.php') ?>
   </footer>
   
 </body>

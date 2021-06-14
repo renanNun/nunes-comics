@@ -24,7 +24,7 @@
 
   <div class="wrap">
     <header>
-        <?php require('../includes/header.php'); ?>
+        <?php include('app/views/includes/header.php'); ?>
     </header>
   
     <main>
@@ -67,7 +67,7 @@
     </div>
   
     <footer>
-      <?php require('../includes/footer.php'); ?>
+      <?php require('app/views/includes/footer.php'); ?>
     </footer>
   
   </div>

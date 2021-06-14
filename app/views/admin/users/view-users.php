@@ -33,8 +33,8 @@
     <div class="container">
       <div class="titulo d-flex justify-content-between align-items-center mb-3">
         <h1 class="mb-0">Usuários</h1>
-        <a href="list-user.html" class="buttons">Voltar</a>
-        <a href="add-user.php" class="buttons">Adicionar</a>
+        <a href="/admin/home" class="buttons">Voltar</a>
+        <a href="create" class="buttons">Adicionar</a>
       </div>
       <table class="table table-borderless mb-0 table-changes">
         <thead>
@@ -45,51 +45,24 @@
           </tr>
         </thead>
         <tbody>
+          <?php foreach($users as $user): ?>
           <tr>
             <th scope="row">1</th>
-            <td>Pedroenrick</td>
+            <td><?=$user->name?></td>
             <td class="d-flex justify-content-end flex-wrap">
-              <a type="button" href="./list-user.html" class="ml-3 mb-1 buttons">Visualizar</a>
+              <form  method="POST" action="details">
+                <input type="hidden" name="id" value="<?= $user->id ?>">
+                  <div class="button-action-view">
+                  <button class="ml-3 mb-1 buttons" type="submit"><span>Visualizar</span></button>
+                  </div>
+            </form>
               <button type="button" class="ml-3 mb-1 buttons">Editar</button>
               <button type="button" class="ml-3 buttons" onclick="excluir();">Excluir</button>
             </td>
+
+            
           </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Gabriel</td>
-            <td class="d-flex justify-content-end flex-wrap">
-              <a type="button"  href="./list-user.html" class=" ml-3 mb-1 buttons">Visualizar</a>
-              <button type="button" class="ml-3 mb-1 buttons">Editar</button>
-              <button type="button" class="ml-3 buttons" onclick="excluir();">Excluir</button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Mara</td>
-            <td class="d-flex justify-content-end flex-wrap">
-              <a type="button"  href="./list-user.html" class="ml-3 mb-1 buttons">Visualizar</a>
-              <button type="button" class="ml-3 mb-1 buttons">Editar</button>
-              <button type="button" class="ml-3 buttons" onclick="excluir();">Excluir</button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">4</th>
-            <td>Sabrina</td>
-            <td class="d-flex justify-content-end flex-wrap">
-              <a type="button"  href="./list-user.html" class="mb-1 ml-3 buttons">Visualizar</a>
-              <button type="button" class="ml-3 mb-1 buttons">Editar</button>
-              <button type="button" class="ml-3 buttons" onclick="excluir();">Excluir</button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">5</th>
-            <td>Gabriel Frasson</td>
-            <td class="d-flex justify-content-end flex-wrap">
-              <a type="button"  href="./list-user.html" class="mb-1 ml-3 buttons">Visualizar</a>
-              <button type="button" class="ml-2 mb-1 ml-3  buttons">Editar</button>
-              <button type="button" class="ml-2 ml-3  buttons" onclick="excluir();">Excluir</button>
-            </td>
-          </tr>
+          <?php endforeach?>
         </tbody>
       </table>
 

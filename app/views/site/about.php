@@ -21,15 +21,12 @@
 </head>
 
 <body>
-
 	<header>
-		<?php require('../includes/header.php'); ?>
+		<?php require('app/views/includes/header.php'); ?>
 	</header>
 
 	<main>
-
 		<div class="info">
-
 			<div class="content">
 
 				<h1> Quem Somos </h1>
@@ -100,7 +97,7 @@
 	</div>
 
 	<footer>
-		<?php require('../includes/footer.php'); ?>
+		<?php require('app/views/includes/footer.php'); ?>
 	</footer>
 
 </body>

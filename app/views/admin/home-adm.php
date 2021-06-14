@@ -10,6 +10,7 @@
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <!-- css -->
     <link rel="stylesheet" href="../../../public/css/global.css">
+    <link rel="stylesheet" href="../../../public/css/contato.css">
 
     <!-- partials -->
     
@@ -26,10 +27,10 @@
     </header>
     <main>
     <div class="container py-3">
-  <header>
 
+  <header>
     <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-      <h1 class="display-4 fw-normal">Nunes Comic's</h1>
+      <h1 class="display-4 fw-normal">Painel Nunes Comic's</h1>
     </div>
   </header>
 
@@ -41,7 +42,7 @@
             <h4 class="my-0 fw-normal">Categorias</h4>
           </div>
           <div class="card-body">
-            <h1 class="card-title">Gerenciar Categoria</h1>
+            <h1 class="card-title">Gerenciar Categorias</h1>
             
             <a type="button" href="categories/list" class="w-100 btn btn-lg btn-primary">Acessar</a>
           </div>
@@ -70,9 +71,9 @@
         </div>
       </div>
     </div>
-  </footer>
-</div>
     </main>
+    <footer></footer>
+</div>
 
     <div class="halftone bottom">
         <img src="../../../public/assets/halftone-effect.svg" alt="">
@@ -80,13 +81,6 @@
     <div class="halftone top">
         <img src="../../../public/assets/halftone-effect.svg" alt="">
     </div>
-
-    <footer>
-    <?php require('../includes/footer.php'); ?>
-    </footer>
-
-    <!-- Mascara input Telefone -->
-    <script src="../../../public/js/mascaraTel.js"></script>
 </body>
 
 </html>
