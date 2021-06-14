@@ -18,6 +18,10 @@ $router->get('admin/users/details', 'UsersController@listUser');
 $router->post('admin/users/details', 'UsersController@show');
 //adiciona no banco
 $router->post('admin/users/list', 'UsersController@store');
+//deleta usuario
+$router->post('admin/users/delete', "UsersController@delete");
+
+
 
 
 

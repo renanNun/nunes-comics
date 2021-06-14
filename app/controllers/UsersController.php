@@ -45,6 +45,6 @@ class UsersController
     public function delete()
     {
         App::get('database')->delete('users', $_POST['id']);
-        return view('admin/users/list');
+        return redirect('admin/users/list');
     }
 }
