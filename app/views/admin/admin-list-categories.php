@@ -51,23 +51,19 @@
               <th scope="row"><?= $category->id ?></th>
               <td><?= $category->name ?></td>
               <td class="d-flex justify-content-end flex-wrap">
-                <form action="/admin/categories/view" method="GET" class="mb-1">
-                  <input type="hidden" name="id" value=<?= $category->id ?>>
+                <form action="/admin/categories/view" method="POST" class="mb-1">
+                  <input type="hidden" name="id" value="<?= $category->id ?>">
                   <button type="submit" >Visualizar</button>
                 </form>
-                <!-- <a href="/admin/categories/view" class="mb-1">
-                  <button type="button" >Visualizar</button>
-                </a> -->
-                <form action="/admin/categories/edit" method="GET">
-                  <input type="hidden" name="id" value=<?= $category->id ?>>
+
+                <form action="/admin/categories/edit" method="POST">
+                  <input type="hidden" name="id" value="<?= $category->id ?>">
                   <button type="submit" class="ml-2 mb-1">Editar</button>
                 </form>
-                <!-- <a href="/admin/categories/edit">
-                  <button type="button" class="ml-2 mb-1">Editar</button>
-                </a> -->
+
                 <form action="/admin/categories/delete" method="POST">
-                  <input type="hidden" name="id" value=<?= $category->id ?>>
-                  <button type="submit" class="ml-2" onclick="excluir();">Excluir</button>
+                  <input type="hidden" name="id" value="<?= $category->id ?>">
+                  <button type="submit" class="ml-2">Excluir</button>
                 </form>
               </td>
             </tr>

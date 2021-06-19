@@ -9,25 +9,32 @@ class CategoriesController
 {
     public function addCategory()
     {
-        return view('admin/admin-add-category');
+        $action = 'create';
+        $title = 'Crie uma nova categoria';
+        $editable = true;
+        $category = null;
+
+        return view('admin/admin-add-category', compact('action', 'title', 'editable', 'category'));
     }
 
     public function viewCategory()
     {
-        // $category_id = $_GET['id'];
-        // // $products = App::get('database')->selectJoin('products', 'categories', $category_id);
-        // $products = App::get('database')->selectProducts($category_id);
+        $action = '';
+        $title = 'Visualização da categoria';
+        $editable = false;
+        $category = App::get('database')->select('categories', $_POST['id']);
 
-        // return view('admin/admin-view-category', compact('products'));
-        return view('admin/admin-view-category');
+        return view('admin/admin-add-category', compact('action', 'title', 'editable', 'category'));
     }
 
     public function editCategory()
     {
-        $id = $_GET['id'];
-        $category = App::get('database')->select('categories', $id);
+        $action = 'update';
+        $title = 'Edite a categoria';
+        $editable = true;
+        $category = App::get('database')->select('categories', $_POST['id']);
 
-        return view('admin/admin-edit-category', compact('category'));
+        return view('admin/admin-add-category', compact('action', 'title', 'editable', 'category'));
     }
 
     public function index()
@@ -65,7 +72,7 @@ class CategoriesController
         $id = $_POST['id'];
 
         if ($id) {
-            App::get('database')->delete('categories', $_POST['id']);
+            App::get('database')->delete('categories', $id);
         }
 
         redirect('admin/categories/list');

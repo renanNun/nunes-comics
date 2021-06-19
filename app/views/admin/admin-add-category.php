@@ -33,20 +33,31 @@
 
 	<main>
 		<div class="container">
-			<form action="/admin/categories/create" method="POST">
+			<form action="/admin/categories/<?= $action; ?>" method="POST">
 				<fieldset>
-					<legend>Crie uma nova categoria</legend>
+					<legend><?= $title; ?></legend>
 
 					<div class="form-item">
 						<label for="category">Categoria:</label>
 						<div class="input-container">
-							<input id="category" type="text" name="name">
+							<input 
+							id="category" 
+							type="text" 
+							name="name" 
+							value="<?= $category ? $category->name : "" ?>" 
+							<?= !$editable ? "readonly" : "" ?>
+							>
 						</div>
+						<?php if ($category) : ?>
+							<input type="hidden" name="id" value=<?= $category->id ?>>
+						<?php endif; ?>
 					</div>
 
-					<div id="form-button" class="form-item">
-						<button type="submit">Salvar</button>
-					</div>
+					<?php if ($editable) : ?>
+						<div id="form-button" class="form-item">
+							<button type="submit">Salvar</button>
+						</div>
+					<?php endif; ?>
 				</fieldset>
 			</form>
 		</div>

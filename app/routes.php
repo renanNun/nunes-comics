@@ -15,9 +15,12 @@ $router->post('users', 'UsersController@store');
 //routes adm category
 $router->get('admin/categories/list', 'CategoriesController@index');
 $router->get('admin/categories/add', 'CategoriesController@addCategory');
-$router->get('admin/categories/edit', 'CategoriesController@editCategory');
-$router->get('admin/categories/view', 'CategoriesController@viewCategory');
 
+// Routes adm category -> Render view
+$router->post('admin/categories/view', 'CategoriesController@viewCategory');
+$router->post('admin/categories/edit', 'CategoriesController@editCategory');
+
+// Routes adm category -> Database
 $router->post('admin/categories/create', 'CategoriesController@create');
 $router->post('admin/categories/update', 'CategoriesController@edit');
 $router->post('admin/categories/delete', 'CategoriesController@delete');
