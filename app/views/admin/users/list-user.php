@@ -48,6 +48,7 @@
             <td class="d-flex justify-content-start flex-wrap ">
             <?= $user->email ?>
             </td>
+            <img src="<?= $user->pic ?>" />
           </tr>
         </tbody>
       </table>

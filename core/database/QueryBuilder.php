@@ -21,9 +21,7 @@ class QueryBuilder
         $sql = "SELECT * FROM {$table}";
 
         $statement = $this->pdo->prepare($sql);
-
         $statement->execute();
-
         return $statement->fetchAll(PDO::FETCH_CLASS);
     }
 
@@ -36,13 +34,36 @@ class QueryBuilder
             ':' . implode(', :', array_keys($params))
         );
 
-        $statement = $this->pdo->prepare($sql);
-        $statement->execute($params);
+        try {
+
+            $statement = $this->pdo->prepare($sql);
+            $statement->execute($params);
+        } catch (\Exception $e) {
+            echo "não foi possivel alterar informações" . $e->getMessage();
+        }
     }
 
 
-    public function edit()
+    public function edit($table, $id, $params)
     {
+        $counter = 1;
+        $sql = "update " . $table . " set ";
+        foreach ($params as $key => $value) {
+            if ($counter == count($params)) {
+                $sql .= $key . " = '" . $value . "'";
+            } else {
+                $sql .= $key . " = '" . $value . "' ,";
+            }
+            $counter += 1;
+        }
+        $sql .= " where id = {$id}";
+
+        try {
+            $statement = $this->pdo->prepare($sql);
+            $statement->execute($params);
+        } catch (\Exception $e) {
+            echo "não foi possivel alterar informações" . $e->getMessage();
+        }
     }
 
 
@@ -50,16 +71,16 @@ class QueryBuilder
     {
         $sql = "DELETE FROM {$table} where id = {$id}";
 
-        $query = $this->pdo->prepare($sql);
-        $query->execute();
+        $statement = $this->pdo->prepare($sql);
+        $statement->execute();
     }
 
 
     public function read($table, $id)
     {
         $sql = "SELECT * FROM {$table} where id = {$id}";
-        $query = $this->pdo->prepare($sql);
-        $query->execute();
-        return $query->fetch(PDO::FETCH_OBJ);
+        $statement = $this->pdo->prepare($sql);
+        $statement->execute();
+        return $statement->fetch(PDO::FETCH_OBJ);
     }
 }

@@ -25,11 +25,21 @@ class UsersController
 
     public function store()
     {
+        if (isset($_FILES['pic'])) {
+            $extension = strtolower(substr($_FILES['pic']['name'], -4));
+            $new_name = md5(time()) . $extension;
+            $file = "/public/img/users";
+
+            move_uploaded_file($_FILES['pic']['new_name'], $file . $new_name);
+        }
+
+    
+        $encript =  md5($_POST['password']);
 
         App::get('database')->insert('users', [
             'name' => $_POST['name'],
             'email' => $_POST['email'],
-            'password' => $_POST['password'],
+            'password' => $encript,
             'pic' => $_POST['pic']
         ]);
 
@@ -38,8 +48,22 @@ class UsersController
 
     public function edit()
     {
-        $user = App::get('database')->show('users', $_POST['id']);
-        return view('admin/users/edit', compact('user'));
+        App::get('database')->edit('users', $_POST['id'],
+        [
+            'name' => $_POST['name'],
+            'email' => $_POST['email'],
+            'password' => $_POST['password'],
+            'pic' => $_POST['pic'] 
+        ]);
+
+        
+        return redirect('admin/users/list');
+    }
+
+    public function showEdit()
+    {
+        $user = App::get('database')->read('users', $_POST['id']);
+        return view('admin/users/edit-user', compact('user'));
     }
 
     public function delete()

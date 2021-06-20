@@ -36,6 +36,11 @@
         <a href="create" class="buttons">Adicionar</a>
       </div>
       <table class="table table-borderless mb-0 table-changes">
+      <?php
+          if (empty($users)) :
+            echo '<td>Nenhum usuario</td>';
+          else :
+      ?>
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -44,29 +49,42 @@
           </tr>
         </thead>
         <tbody>
-          <?php foreach ($users as $user) : ?>
-            <tr>
-              <th scope="row"><?= $user->id ?></th>
-              <td><?= $user->name ?></td>
-              <td class="d-flex justify-content-end flex-wrap">
-                <form method="POST" action="details">
-                  <input type="hidden" name="id" value="<?= $user->id ?>">
-                  <div>
-                    <button class="ml-3 mb-1 buttons" type="submit"><span>Visualizar</span></button>
-                  </div>
-                </form>
-                <button type="button" class="ml-3 mb-1 buttons">Editar</button>
-                <form method="POST" action="delete">
-                  <input type="hidden" name="id" value="<?= $user->id ?>">
-                  <div>
-                    <button class="ml-3 mb-1 buttons" type="submit" onclick="excluir()";><span>Excluir</span></button>
-                  </div>
-                </form>
-              </td>
+          <?php foreach ($users as $user) :?>
+              <tr>
+                <th scope="row"><?= $user->id ?></th>
+                <td><?= $user->name ?></td>
+                <td class="d-flex justify-content-end flex-wrap">
+                  <!-- Inicio Form Add -->
+                  <form method="POST" action="details">
+                    <input type="hidden" name="id" value="<?= $user->id ?>">
+                    <div>
+                      <button class="ml-3 mb-1 buttons" type="submit"><span>Visualizar</span></button>
+                    </div>
+                  </form>
+                  <!-- Fim Form Add -->
 
+                  <!-- Inicio Form Edit -->
+                  <form method="POST" action="formEdit">
+                    <input type="hidden" name="id" value="<?= $user->id ?>">
+                    <div>
+                      <button class="ml-3 mb-1 buttons" type="submit"><span>Editar</span></button>
+                    </div>
+                  </form>
+                  <!-- Fim Form Edit -->
 
-            </tr>
-          <?php endforeach ?>
+                  <!-- Inicio Form Delete -->
+                  <form method="POST" action="delete">
+                    <input type="hidden" name="id" value="<?= $user->id ?>">
+                    <div>
+                      <button class="ml-3 mb-1 buttons" type="submit" onclick="excluir()" ;><span>Excluir</span></button>
+                    </div>
+                  </form>
+
+                  <!-- Fim Form Delete -->
+                </td>
+              </tr>
+            <?php endforeach ?>
+          
         </tbody>
       </table>
 
@@ -94,6 +112,7 @@
         </ul>
       </nav>
     </div>
+    <?php endif ?>
   </main>
 
   <div class="halftone bottom">

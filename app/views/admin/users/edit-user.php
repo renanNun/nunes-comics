@@ -27,7 +27,7 @@
 		<header class="d-flex justify-content-center">
 			<div class="row-div">
 				<div class="space">
-					<h1>Novo Usuário</h1>
+					<h1>Editar Usuário</h1>
 				</div>
 
 				<div class="space">
@@ -39,25 +39,25 @@
 		</header>
   		<main class="d-flex justify-content-center">
 			<div class="container">
-				<form method="POST" action="list">
+				<form method="POST" action="edit">
 					<div>
 						<label>Nome: </label>
-						<input id="name" autofocus type="text" name="name" size="34" placeholder="Informe seu nome">
+						<input id="name" value="<?= $user->name ?>" autofocus type="text" name="name" size="34" placeholder="Informe seu nome">
 					</div>
 
 					<div>
 						<label>E-mail: </label>
-						<input id="email" type="email" name="email" placeholder="email@email.com"></input>
+						<input id="email" value="<?= $user->email ?>" type="email" name="email" placeholder="email@email.com"></input>
 					</div>
 
 					<div >
 						<label id="password" for="password">Senha: </label>
-						<input id="password" type="password" name="password" placeholder="Informe sua senha">
+						<input id="password" value="<?= $user->password ?>" type="password" name="password" placeholder="Informe sua senha">
 					</div>
 
 					<div >
 						<label id="pic" for="pic">Foto: </label>
-						<input id="pic" type="file" name="pic" multiple placeholder="Insira a foto">
+						<input id="pic" value="<?= $user->pic ?>" type="file" name="pic" placeholder="Insira a foto">
 					</div>
 
 					<div class="row-button">
@@ -69,8 +69,9 @@
 						</div>
 
 						<div >
+							<input type="hidden" id="id" name="id" value="<?= $user->id ?>">
 							<button type="submit" class="button" name="con-enviar" id="con-enviar">
-								<span class="font-contact">Cadastrar</span>
+								<span class="font-contact">Editar</span>
 							</button>
 						</div>
 					</div>
