@@ -33,10 +33,10 @@
 
 	<main>
 		<div class="container">
-			<img src="../public/images/item1.jpg">
+			<img src="<?= $product->foto ?>" width="250px">
 
 			<div class="field">
-				<span class="field-title">Nome:</span> <span id="product-name">Wizard</span>
+				<span class="field-title">Nome:</span> <span id="product-name"><?= $product->nome ?></span>
 			</div>
 
 			<div class="field">
@@ -55,7 +55,7 @@
 			</div>
 
 			<div class="field">
-				<span class="field-title">Preço:</span> <span id="product-price">R$ 44,90</span>
+				<span class="field-title">Preço:</span> <span id="product-price">R$ <?= $product->preco ?></span>
 			</div>
 		</div>
 	</main>

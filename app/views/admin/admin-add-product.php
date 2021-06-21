@@ -34,20 +34,26 @@
 
 	<main>
 		<div class="container">
-			<form>
+			<form method="POST" action="/admin/products/<?= $action; ?>">
 				<fieldset>
-					<legend>Adicione um novo produto</legend>
+					<legend><?= $title ?></legend>
 					<div class="form-item">
 						<label for="product-name">Nome:</label>
 						<div class="input-container">
-							<input id="product-name" type="text" name="product-name">
+							<input 
+								id="nome" 
+								type="text" 
+								name="nome" 
+								value="<?= $product ? $product->nome : "" ?>"
+								<?= !$editable ? "readonly" : "" ?>
+							>
 						</div>
 					</div>
 
 					<div class="form-item">
 						<label>Preço:</label>
 						<div class="input-container">
-							<input id="precoProduto" type="text" name="precoProduto" onkeyup="formatarMoeda();">
+							<input id="preco" type="text" name="preco" value="<?= $product->preco ?>" onkeyup="formatarMoeda();">
 						</div>
 					</div>
 
@@ -73,7 +79,9 @@
 					<div id="image-container" class="form-item"></div>
 
 					<div class="form-item form-buttons">
-						<button type="submit" value="save">Salvar</button>
+							<button type="submit" class="button" name="con-enviar" id="con-enviar">
+								<span class="font-contact">Salvar</span>
+							</button>
 						<button type="reset" value="reset">Resetar</button>
 					</div>
 				</fieldset>

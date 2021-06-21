@@ -33,13 +33,13 @@
 
 	<main>
 		<div class="container">
-			<form>
+			<form method="POST" action="edit">
 				<fieldset>
 					<legend>Edite as informações do produto</legend>
 					<div class="form-item">
 						<label for="product-name">Nome:</label>
 						<div class="input-container">
-							<input id="product-name" type="text" name="product-name" value="nome">
+							<input id="product-name" type="text" name="product-name" value="<?= $products->nome ?>">
 						</div>
 					</div>
 

@@ -56,51 +56,27 @@
 
 						<?php foreach ($products as $product) : ?>
             	<tr>
-              	<th scope="row"><?= $products->id ?></th>
-              	<td><?= $products->nome ?></td>
+              	<th scope="row"><?= $product->id ?></th>
+              	<td><?= $product->nome ?></td>
               	<td class="d-flex justify-content-end flex-wrap">
                 	<form action="/admin/products/view" method="POST" class="mb-1">
-                  	<input type="hidden" name="id" value="<?= $products->id ?>">
+                  	<input type="hidden" name="id" value="<?= $product->id ?>">
                   	<button type="submit" >Visualizar</button>
                 	</form>
 
                 	<form action="/admin/products/edit" method="POST">
-                  	<input type="hidden" name="id" value="<?= $products->id ?>">
+                  	<input type="hidden" name="id" value="<?= $product->id ?>">
                   	<button type="submit" class="ml-2 mb-1">Editar</button>
                 	</form>
 
                 	<form action="/admin/products/delete" method="POST">
-                  	<input type="hidden" name="id" value="<?= $products->id ?>">
+                  	<input type="hidden" name="id" value="<?= $product->id ?>">
                   	<button type="submit" class="ml-2">Excluir</button>
                 	</form>
               	</td>
             	</tr>
           	<?php endforeach; ?>
-
-						<tr>
-							<th scope="row">1</th>
-							<td>Livro Justiceiro - No Pricípio</td>
-							<td class="botoes flex-wrap">
-								<a href="./admin-view-product.html">
-									<button type="button" class="mr-1">Visualizar</button>
-								</a>
-								<a href="./admin-edit-products.html">
-									<button type="button" class="mr-1">Editar</button>
-								</a>
-								<button type="button" class="mr-1" onclick="excluir();">Excluir</button>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row">2</th>
-							<td>Livro Justiceiro - Valley Forge</td>
-							<td class="botoes flex-wrap">
-								<a href="./admin-view-product.html">
-									<button type="button" class="mr-1">Visualizar</button>
-								</a>
-								<a href="./admin-edit-products.html"><button type="button" class="mr-1">Editar</button></a>
-								<button type="button" class="mr-1" onclick="excluir();">Excluir</button>
-							</td>
-						</tr>
+						
 					</tbody>
 				</table>
 			</div>

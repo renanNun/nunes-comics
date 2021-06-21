@@ -10,23 +10,24 @@ class ProductsController {
         $action = 'create';
         $title = 'Crie um novo produto';
         $editable = true;
-        $product = null;
+        $products = null;
 
-        return view('admin/admin-add-product', compact('action', 'title', 'editable', 'product'));
+        return view('admin/admin-add-product', compact('action', 'title', 'editable', 'products'));
     }
 
     public function viewProduct() {
         $action = '';
         $title = 'Visualização do produto';
         $editable = false;
-        $products = App::get('database')->select('produtos', $_POST['id']);
+        $product = App::get('database')->select('produtos', $_POST['id']);
 
-        return view('admin/admin-view-product', compact('action', 'title', 'editable', 'products'));
+        return view('admin/admin-view-product', compact('action', 'title', 'editable', 'product'));
     }
 
-    public function editProduct() {
+    public function editProduct()
+    {
         $action = 'update';
-        $title = 'Edite o produto';
+        $title = 'Edite um produto existente';
         $editable = true;
         $product = App::get('database')->select('produtos', $_POST['id']);
 
@@ -40,25 +41,40 @@ class ProductsController {
     }
 
     public function create() {
-        $name = $_POST['name'];
+        $nome = $_POST['nome'];
+        $preco = $_POST['preco'];
 
-        if ($name) {
-            App::get('database')->insert('produtos', compact('name'));
+        if ($nome) {
+            App::get('database')->insert('produtos', compact('nome', 'preco'));
         }
 
-        redirect('admin/categories/list');
+        redirect('admin/products/list');
     }
 
-    public function edit() {
-        $name = $_POST['name'];
-        $id = $_POST['id'];
+    public function edit()
+    {
+        $nome = $_POST['nome'];
+        $preco = $_POST['preco'];
 
-        if ($id && $name) {
-            App::get('database')->edit('produtos', compact('name'), $id);
+        if ($id && $name && $preco) {
+            App::get('database')->edit('produtos', compact('nome', 'preco'));
         }
 
-        redirect('admin/categories/list');
+        redirect('admin/products/list');
     }
+
+
+    // public function store() {
+    //     App::get('database')->insert('produtos', [
+    //         'id' => $_POST['id'],
+    //         'nome' => $_POST['nome'],
+    //         'estoque' => $_POST['estoque'],
+    //         'foto' => $_POST['foto'],
+    //         'preco' => $_POST['preco']
+    //     ]);
+
+    //     return redirect('admin/products/list');
+    // }
 
     public function delete() {
         $id = $_POST['id'];
@@ -67,6 +83,6 @@ class ProductsController {
             App::get('database')->delete('produtos', $id);
         }
 
-        redirect('admin/categories/list');
+        redirect('admin/products/list');
     }
 }

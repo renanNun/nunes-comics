@@ -27,10 +27,6 @@ class PagesController {
     return view('site/login');
   }
 
-  public function admCategory() {
-    return view('admin/admin-list-categories');
-  }
-
   public function admProducts() {
     return view('admin/admin-list-products');
   }
