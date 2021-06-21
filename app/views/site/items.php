@@ -70,7 +70,23 @@
       </header>
 
       <div class="products">
-        <div class="itemBox" data-item="marvel wolverine">
+        <?php foreach($products as $product) { ?>
+          <div class="itemBox" data-item="marvel wolverine">
+            <div class="imgBox">
+              <img src="<?= "$product->foto" ?>" alt="">
+            </div>
+            <div class="details">
+              <div class="info">
+                <h3>Wolverine</h3>
+                <p><span>Nome:</span> <?= "$product->nome" ?></p>
+                <p><span>Quantidade:</span> <?= "$product->estoque" ?></p>
+                <p><span>Preço:</span> R$<?= "$product->preco" ?></p>
+              </div>
+              <a href="./item.html">Ver Produto</a>
+            </div>
+          </div>
+        <?php }; ?>
+        <!--  <div class="itemBox" data-item="marvel wolverine">
           <div class="imgBox">
             <img src="../../../public/img/item1.jpg" alt="">
           </div>
@@ -210,7 +226,7 @@
             <a href="./item.html">Ver Produto</a>
           </div>
         </div>
-      </div>
+      </div> -->
     </section>
 
   </main>

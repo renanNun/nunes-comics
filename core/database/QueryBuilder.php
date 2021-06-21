@@ -10,25 +10,19 @@ class QueryBuilder
     protected $pdo;
 
 
-    public function __construct()
+    public function __construct($pdo)
     {
-    
+        $this->pdo = $pdo;
     }
 
 
     public function selectAll($table)
     {
-        $sql = "select * from {$table}";
+        $sql = "SELECT * FROM {$table}";
 
-        try {
-            $stmt = $this->pdo->prepare($sql);
-
-            $stmt->execute();
-
-            return $stmt->fetchAll(PDO::FETCH_CLASS);
-        } catch (Exception $e) {
-            die($e->getMessage());
-        }
+        $statement = $this->pdo->prepare($sql);
+        $statement->execute();
+        return $statement->fetchAll(PDO::FETCH_CLASS);
     }
 
     public function insert()

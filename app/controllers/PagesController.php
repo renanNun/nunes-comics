@@ -15,10 +15,9 @@ class PagesController {
   }
   
   public function products() {
-    // $tarefas = App::get('database')->selectAll('produtos');
+    $products = App::get('database')->selectAll('produtos');
 
-    // return view('site/products', compact('produtos'));
-    return view('site/items');
+    return view('site/items', compact('products'));
   }
 
   public function about() {
