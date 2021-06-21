@@ -1,12 +1,12 @@
 <?php
-  $router->get('index', 'pagesController@home');
-  $router->get('about', 'pagesController@about');
-  $router->get('contact', 'pagesController@contact');
-  $router->get('login', 'pagesController@login');
-  $router->get('items', 'pagesController@products');
+  $router->get('index', 'PagesController@home');
+  $router->get('about', 'PagesController@about');
+  $router->get('contact', 'PagesController@contact');
+  $router->get('login', 'PagesController@login');
+  $router->get('items', 'PagesController@products');
 
   // routes adm user
-  $router->get('admin/home', 'pagesController@homeAdm');
+  $router->get('admin/home', 'PagesController@homeAdm');
   $router->get('admin/users/list', 'UsersController@admUser');
   $router->post('users', 'UsersController@store');
 

@@ -29,12 +29,12 @@
           <img src="../../../public/assets/hamburger-menu.svg" alt="">
         </label>
         <label class="logo">
-          <img src="../../../public/assets/logo.png" alt="">
+          <a href="./index"><img src="../public/assets/logo.png" alt=""></a>
         </label>
         <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./about.html">Quem Somos</a></li>
-          <li><a href="./items.html">Produtos</a></li>
+          <li><a href="./index">Home</a></li>
+          <li><a href="./about">Quem Somos</a></li>
+          <li><a href="./items">Produtos</a></li>
           <li><a class="active" href="#">Contato</a></li>
         </ul>
       </nav>

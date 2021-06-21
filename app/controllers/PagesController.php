@@ -7,25 +7,26 @@ use Exception;
 
 class PagesController {
   public function home() {
-    return view('index');
+    return view('site/index');
   }
   
   public function contact() {
-    return view('contact');
+    return view('site/contact');
   }
   
   public function products() {
-    $tarefas = App::get('database')->selectAll('produtos');
-    
-    return view('products', compact('produtos'));
+    // $tarefas = App::get('database')->selectAll('produtos');
+
+    // return view('site/products', compact('produtos'));
+    return view('site/items');
   }
 
   public function about() {
-    return view('about');
+    return view('site/about');
   }
 
   public function login() {
-    return view('login');
+    return view('site/login');
   }
 
   public function homeAdm() {
