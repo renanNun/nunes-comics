@@ -16,7 +16,6 @@ class PagesController {
   
   public function products() {
     $products = App::get('database')->selectAll('produtos');
-
     return view('site/items', compact('products'));
   }
 
@@ -28,15 +27,11 @@ class PagesController {
     return view('site/login');
   }
 
-  public function homeAdm() {
-    return view('home-adm');
-  }
-
   public function admCategory() {
-    return view('categories/admin-list-categories');
+    return view('admin/admin-list-categories');
   }
 
-  public function formUsers() {
-    return view('users/add-user');
+  public function admProducts() {
+    return view('admin/admin-list-products');
   }
 }

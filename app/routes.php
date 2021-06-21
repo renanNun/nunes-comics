@@ -1,5 +1,5 @@
 <?php
-  $router->get('index', 'PagesController@home');
+  $router->get('', 'PagesController@home');
   $router->get('about', 'PagesController@about');
   $router->get('contact', 'PagesController@contact');
   $router->get('login', 'PagesController@login');
@@ -10,6 +10,19 @@
   $router->get('admin/users/list', 'UsersController@admUser');
   $router->post('users', 'UsersController@store');
 
-  //routes adm category
-  $router->get('categories/list', 'PagesController@admCategory');
+
+
+  //routes adm products
+  $router->get('admin/products/list', 'ProductsController@index');
+  $router->get('admin/products/add', 'ProductsController@addProduct');
+
+  // Routes adm category -> Render view
+  $router->post('admin/products/view', 'ProductsController@viewProduct');
+  $router->post('admin/products/edit', 'ProductsController@editProduct');
+
+  // Routes adm category -> Database
+  $router->post('admin/products/create', 'ProductsController@create');
+  $router->post('admin/products/update', 'ProductsController@edit');
+  $router->post('admin/products/delete', 'ProductsController@delete');
+
 ?>
