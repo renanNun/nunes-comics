@@ -46,13 +46,9 @@
         <h2>Últimos Lançamentos</h2>
         <div class="swiper-container">
           <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="../../../public/img/item10.jpg" class="comic-cover" alt=""></div>
-            <div class="swiper-slide"><img src="../../../public/img/item5.jpg" class="comic-cover" alt=""></div>
-            <div class="swiper-slide"><img src="../../../public/img/item6.jpg" class="comic-cover" alt=""></div>
-            <div class="swiper-slide"><img src="../../../public/img/item7.jpg" class="comic-cover" alt=""></div>
-            <div class="swiper-slide"><img src="../../../public/img/item8.jpg" class="comic-cover" alt=""></div>
-            <div class="swiper-slide"><img src="../../../public/img/item11.jpg" class="comic-cover" alt=""></div>
-            <div class="swiper-slide"><img src="../../../public/img/item12.jpg" class="comic-cover" alt=""></div>
+            <?php foreach($products as $product) { ?>
+              <div class="swiper-slide"><img src="<?= $product->foto ?>" class="comic-cover" alt=""></div>
+            <?php }; ?>
           </div>
           <div class="swiper-pagination"></div>
         </div>

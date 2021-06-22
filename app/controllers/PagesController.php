@@ -7,7 +7,8 @@ use Exception;
 
 class PagesController {
   public function home() {
-    return view('site/index');
+    $products = App::get('database')->selectAll('produtos');
+    return view('site/index', compact('products'));
   }
   
   public function contact() {
