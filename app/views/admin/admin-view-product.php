@@ -42,11 +42,7 @@
 			<div class="field">
 				<span class="field-title">Descrição:</span>
 				<p id="product-description">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet nunc sem. Fusce
-					malesuada felis eget libero pellentesque, in suscipit lacus efficitur. Proin porttitor ultricies
-					accumsan. Mauris placerat iaculis lorem, et facilisis lectus venenatis quis. Morbi nisi ex, vehicula
-					vitae erat sit amet, congue suscipit ante. Nunc tempor nisi non lectus efficitur, elementum ornare
-					massa maximus. Proin facilisis metus eu arcu sodales, eget malesuada diam fermentum.
+				<?= $product->description ?>
 				</p>
 			</div>
 

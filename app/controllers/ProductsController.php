@@ -43,9 +43,11 @@ class ProductsController {
     public function create() {
         $nome = $_POST['nome'];
         $preco = $_POST['preco'];
+        $description = $_POST['description'];
+        $estoque = $_POST['estoque'];
 
         if ($nome) {
-            App::get('database')->insert('produtos', compact('nome', 'preco'));
+            App::get('database')->insert('produtos', compact('nome', 'preco', 'description', 'estoque'));
         }
 
         redirect('admin/products/list');
