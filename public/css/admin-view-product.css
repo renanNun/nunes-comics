@@ -17,22 +17,19 @@ main .container {
 }
 
 main .container .field-title {
-    color: var(--yellow);
+    color: var(--blue);
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #000000;
 }
 
 main .container img {
-    width: 9.4rem;
-    height: 12.5rem;
+    width: 15rem;
+    height: 18.75rem;
     float: left;
     margin-right: 1rem;
     margin-bottom: 1rem;
     transition: 0.5s;
-}
-
-main .container img:hover {
-    transform: scale(1.05);
+    border: 2px solid #000;
 }
 
 main .container .field + .field {
