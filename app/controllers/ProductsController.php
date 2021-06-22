@@ -32,8 +32,9 @@ class ProductsController {
         $title = 'Edite um produto existente';
         $editable = true;
         $product = App::get('database')->select('produtos', $_POST['id']);
+        $categories = App::get('database')->selectAll('categorias');
 
-        return view('admin/admin-add-product', compact('action', 'title', 'editable', 'product'));
+        return view('admin/admin-add-product', compact('action', 'title', 'editable', 'product', 'categories'));
     }
 
     public function index() {
@@ -63,15 +64,19 @@ class ProductsController {
 
     public function edit() {
 
+        $file = "../../../public/img/products/";
+        $foto = $file . $_POST['image'];
+
         $dados = ([
             'name' => $_POST['name'],
             'preco' => $_POST['preco'],
             'description' => $_POST['description'],
             'estoque' => $_POST['estoque'],
-            'foto' => '../../../public/img/item4.jpg',
+            'foto' => $foto,
             'fk_category' => $_POST['category']
         ]);
         $id = $_POST['id'];
+
         
         App::get('database')->edit('produtos', $dados, $id);
 
