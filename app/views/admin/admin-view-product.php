@@ -47,7 +47,7 @@
 			</div>
 
 			<div class="field">
-				<span class="field-title">Categoria:</span> <span id="product-category">Marvel Comics</span>
+				<span class="field-title">Categoria:</span> <span id="product-category"><?= $category->nome ?></span>
 			</div>
 
 			<div class="field">

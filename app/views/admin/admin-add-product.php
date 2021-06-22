@@ -39,47 +39,68 @@
 					<legend><?= $title ?></legend>
 					<div class="form-item">
 						<label for="product-name">Nome:</label>
-						<div class="input-container">
-							<input id="name" type="text" name="name">
+						<div class="input-container">           
+							<input 
+								id="name"	
+								type="text"
+								name="name" 
+								value="<?= $product ? $product->name : "" ?>" 
+							>
 						</div>
 					</div>
 
 					<div class="form-item">
 						<label>Preço:</label>
 						<div class="input-container">
-							<input id="preco" type="text" name="preco" onkeyup="formatarMoeda();">
+							<input 
+								id="preco" 
+								type="text" 
+								name="preco" 
+								value="<?= $product ? $product->preco : "" ?>" 
+								onkeyup="formatarMoeda();"
+							>
 						</div>
 					</div>
 
 					<div class="form-item">
 						<label for="description">Descrição:</label>
-						<textarea id="description" name="description"></textarea>
+						<textarea 
+							id="description" 
+							name="description"
+							value="<?= $product ? $product->description : "" ?>" 
+						><?= $product ? $product->description : "" ?> </textarea>
 					</div>
 
 					<div class="form-item">
 						<label>Quantidade:</label>
 						<div class="input-container">
-							<input id="estoque" type="number" name="estoque">
+							<input 
+								id="estoque" 
+								type="number" 
+								name="estoque"
+								value="<?= $product ? $product->estoque : "" ?>" 
+							>
 						</div>
 					</div>
 
 					<div class="form-item">
 						<label for="category">Categoria: </label>
 						<select id="category" name="category">
-							<option value="">Marvel Comics</option>
-							<option value="">DC Comics</option>
+							<?php foreach($categories as $category) { ?>
+								<option value="<?= $category->id ?>"><?= $category->nome ?></option>
+							<?php }; ?>
 						</select>
 					</div>
 
 					<div class="form-item">
 						<label>Foto:</label>
-						<label id="file-button" for="product-image">Selecionar uma imagem &#187;</label>
-						<input id="product-image" type="file" name="product-image" onchange="handleSelectImage(event)">
+						<label id="file-button" for="image">Selecionar uma imagem</label>
+						<input id="image" type="file" name="image" onchange="handleSelectImage(event)">
 					</div>
 
 					<div id="image-container" class="form-item"></div>
 
-					<input type="hidden" id="id" name="id" value="<?php $product->id ?>">
+					<input type="hidden" id="id" name="id" value="<?= $product ? $product->id : "" ?>">
 
 					<div class="form-item form-buttons">
 							<button type="submit" class="button" name="con-enviar" id="con-enviar">
