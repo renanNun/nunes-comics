@@ -15,8 +15,8 @@
 	<script src="https://kit.fontawesome.com/86afc28056.js" crossorigin="anonymous"></script>
 
 	<!-- css -->
-	<link rel="stylesheet" href="../public/styles/global.css">
-	<link rel="stylesheet" href="../public/styles/admin-view-product.css">
+	<link rel="stylesheet" href="../../../public/css/global.css">
+	<link rel="stylesheet" href="../../../public/css/admin-view-product.css">
 
 	<title>Admin | Nunes' Comics</title>
 
@@ -57,10 +57,10 @@
 	</main>
 
 	<div class="halftone bottom">
-		<img src="../img/halftone-effect.svg" alt="">
+		<img src="../../../public/assets/halftone-effect.svg" alt="">
 	</div>
 	<div class="halftone top">
-		<img src="../img/halftone-effect.svg" alt="">
+		<img src="../../../public/assets/halftone-effect.svg" alt="">
 	</div>
 </body>
 
