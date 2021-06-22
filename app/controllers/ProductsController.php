@@ -49,21 +49,12 @@ class ProductsController {
         $estoque = $_POST['estoque'];
         $fk_category = $_POST['category'];
 
-        var_dump($_FILES['image']);
-        die();
+        $file = "../../../public/img/products/";
+        $foto = $file . $_POST['image']; 
 
-        if (!isset($_FILES['image'])) {
-            $extension = strtolower(substr($_FILES['image']['name'], -4));
-            $new_name = md5(time()) . $extension;
-            $file = "/public/img/products";
-
-            move_uploaded_file($_FILES['image']['new_name'], $file . $new_name);
-            $image = $file . $new_name;
-        }
-        
         
         if ($name) {
-            App::get('database')->insert('produtos', compact('name', 'preco', 'description', 'estoque', 'fk_category', 'image'));
+            App::get('database')->insert('produtos', compact('name', 'preco', 'description', 'estoque', 'fk_category', 'foto'));
         }
 
 
