@@ -40,26 +40,27 @@
 					<div class="form-item">
 						<label for="product-name">Nome:</label>
 						<div class="input-container">
-							<input 
-								id="nome" 
-								type="text" 
-								name="nome" 
-								value="<?= $product ? $product->nome : "" ?>"
-								<?= !$editable ? "readonly" : "" ?>
-							>
+							<input id="nome" type="text" name="nome">
 						</div>
 					</div>
 
 					<div class="form-item">
 						<label>Preço:</label>
 						<div class="input-container">
-							<input id="preco" type="text" name="preco" value="<?= $product->preco ?>" onkeyup="formatarMoeda();">
+							<input id="preco" type="text" name="preco" onkeyup="formatarMoeda();">
 						</div>
 					</div>
 
 					<div class="form-item">
 						<label for="description">Descrição:</label>
 						<textarea id="description" name="description"></textarea>
+					</div>
+
+					<div class="form-item">
+						<label>Quantidade:</label>
+						<div class="input-container">
+							<input id="estoque" type="number" name="estoque">
+						</div>
 					</div>
 
 					<div class="form-item">
