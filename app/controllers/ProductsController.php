@@ -49,6 +49,9 @@ class ProductsController {
         $estoque = $_POST['estoque'];
         $fk_category = $_POST['category'];
 
+        var_dump($_FILES['image']);
+        die();
+
         if (!isset($_FILES['image'])) {
             $extension = strtolower(substr($_FILES['image']['name'], -4));
             $new_name = md5(time()) . $extension;
@@ -56,16 +59,12 @@ class ProductsController {
 
             move_uploaded_file($_FILES['image']['new_name'], $file . $new_name);
             $image = $file . $new_name;
-
-            var_dump($image);
-            die();
-
-            if ($name) {
-                App::get('database')->insert('produtos', compact('name', 'preco', 'description', 'estoque', 'fk_category', 'image'));
-            }
         }
-
-
+        
+        
+        if ($name) {
+            App::get('database')->insert('produtos', compact('name', 'preco', 'description', 'estoque', 'fk_category', 'image'));
+        }
 
 
         redirect('admin/products/list');
