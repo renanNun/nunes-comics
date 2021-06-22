@@ -41,13 +41,13 @@ class ProductsController {
     }
 
     public function create() {
-        $nome = $_POST['nome'];
+        $name = $_POST['name'];
         $preco = $_POST['preco'];
         $description = $_POST['description'];
         $estoque = $_POST['estoque'];
 
-        if ($nome) {
-            App::get('database')->insert('produtos', compact('nome', 'preco', 'description', 'estoque'));
+        if ($name) {
+            App::get('database')->insert('produtos', compact('name', 'preco', 'description', 'estoque'));
         }
 
         redirect('admin/products/list');
@@ -55,11 +55,12 @@ class ProductsController {
 
     public function edit()
     {
-        $nome = $_POST['nome'];
+        $id = $_POST['id'];
+        $name = $_POST['name'];
         $preco = $_POST['preco'];
 
-        if ($id && $name && $preco) {
-            App::get('database')->edit('produtos', compact('nome', 'preco'));
+        if (!(isset($id) && isset($name) && isset($preco))) {
+            App::get('database')->edit('produtos', compact('name', 'preco'), $id);
         }
 
         redirect('admin/products/list');

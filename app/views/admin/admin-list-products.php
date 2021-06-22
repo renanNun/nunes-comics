@@ -57,7 +57,7 @@
 						<?php foreach ($products as $product) : ?>
             	<tr>
               	<th scope="row"><?= $product->id ?></th>
-              	<td><?= $product->nome ?></td>
+              	<td><?= $product->name ?></td>
               	<td class="d-flex justify-content-end flex-wrap">
                 	<form action="/admin/products/view" method="POST" class="mb-1">
                   	<input type="hidden" name="id" value="<?= $product->id ?>">

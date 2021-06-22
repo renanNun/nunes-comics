@@ -40,7 +40,7 @@
 					<div class="form-item">
 						<label for="product-name">Nome:</label>
 						<div class="input-container">
-							<input id="nome" type="text" name="nome">
+							<input id="name" type="text" name="name">
 						</div>
 					</div>
 
@@ -78,6 +78,8 @@
 					</div>
 
 					<div id="image-container" class="form-item"></div>
+
+					<input type="hidden" id="id" name="id" value="<?php $product->id ?>">
 
 					<div class="form-item form-buttons">
 							<button type="submit" class="button" name="con-enviar" id="con-enviar">

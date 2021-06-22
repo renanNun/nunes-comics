@@ -77,8 +77,8 @@
             </div>
             <div class="details">
               <div class="info">
-                <h3>Wolverine</h3>
-                <p><span>Nome:</span> <?= "$product->nome" ?></p>
+                <h3>R$<?= "$product->preco" ?></h3>
+                <p><span>Nome:</span> <?= "$product->name" ?></p>
                 <p><span>Quantidade:</span> <?= "$product->estoque" ?></p>
                 <p><span>Preço:</span> R$<?= "$product->preco" ?></p>
               </div>

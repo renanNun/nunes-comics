@@ -36,7 +36,7 @@
 			<img src="<?= $product->foto ?>" width="250px">
 
 			<div class="field">
-				<span class="field-title">Nome:</span> <span id="product-name"><?= $product->nome ?></span>
+				<span class="field-title">Nome:</span> <span id="product-name"><?= $product->name ?></span>
 			</div>
 
 			<div class="field">
