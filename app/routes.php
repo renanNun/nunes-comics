@@ -25,4 +25,6 @@ $router->post('admin/categories/create', 'CategoriesController@create');
 $router->post('admin/categories/update', 'CategoriesController@edit');
 $router->post('admin/categories/delete', 'CategoriesController@delete');
 
+$router->get('contact', 'PagesController@contact');
+$router->post('contact/send', 'ContactController@sendEmail');
 ?>
