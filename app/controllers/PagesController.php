@@ -31,4 +31,13 @@ class PagesController {
   public function admProducts() {
     return view('admin/admin-list-products');
   }
+
+  // talvez não precise
+  public function homeAdm(){
+    return view('home-adm');
+  }
+
+  public function formUsers(){
+    return view('users/add-user');
+  }
 }

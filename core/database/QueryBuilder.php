@@ -3,6 +3,7 @@
 namespace App\Core\Database;
 
 use PDO;
+use FFI\Exception;
 
 class QueryBuilder
 {
@@ -10,7 +11,7 @@ class QueryBuilder
     protected $pdo;
 
 
-    public function __construct($pdo)
+    public function __construct(PDO $pdo)
     {
         $this->pdo = $pdo;
     }
@@ -36,11 +37,15 @@ class QueryBuilder
 
     public function selectAll($table)
     {
-        $sql = "SELECT * FROM {$table}";
-
-        $statement = $this->pdo->prepare($sql);
-        $statement->execute();
-        return $statement->fetchAll(PDO::FETCH_CLASS);
+        try {
+            $statement = $this->pdo->prepare("SELECT * FROM {$table}");
+    
+            $statement->execute();
+     
+            return $statement->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die("An error occurred when trying to select from database: {$e->getMessage()}");
+        }
     }
 
     public function insert($table, $parameters)

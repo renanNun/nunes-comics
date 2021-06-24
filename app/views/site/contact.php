@@ -50,7 +50,7 @@
         </div>
         <div class="row">
             <div class="info">
-                <form action="">
+                <form action="/contact/send" method="POST">
                     <div>
                         <label for="Nome" class="font">Nome:</label>
                         <input type="text" autofocus required="required" name="nome" id="nome"
