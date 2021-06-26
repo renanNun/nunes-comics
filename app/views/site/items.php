@@ -82,7 +82,10 @@
                 <p><span>Quantidade:</span> <?= "$product->estoque" ?></p>
                 <p><span>Preço:</span> R$<?= "$product->preco" ?></p>
               </div>
-              <a href="./item.html">Ver Produto</a>
+              <form action="/item" method="POST" class="mb-1">
+                <input type="hidden" name="id" value="<?= $product->id ?>">
+                <button type="submit">Visualizar</button>
+              </form>
             </div>
           </div>
         <?php }; ?>

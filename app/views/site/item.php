@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="../../../public/css/navbar.css">
   <link rel="stylesheet" href="../../../public/css/footer.css">
   
-  <title>(Nome do produto) | Nunes' Comics</title>
+  <title><?= $product->name ?> | Nunes' Comics</title>
 </head>
 <body>
 
@@ -41,15 +41,15 @@
     <div class="container">
       <section class="info">
         <div class="image">
-          <img src="../../../public/img/item3.jpg" alt="">
+          <img src="<?= $product->foto ?>" alt="">
         </div>
         <div class="details">
-          <h3>Superman</h3>
-          <p><span>Título:</span><br> Action Comics #1</p>
+          <h3><?= $product->name ?></h3>
+          <p><span>Título:</span><br><?= $product->name ?></p>
           <p><span>Categoria:</span><br> Junho, 1938</p>
           <p>
-            <span>Descrição:</span><br> Primeira história em quadrinhos que conta
-            com a aparição de Superman.
+            <span>Descrição:</span><br> 
+            <?= $product->description ?>
           </p>
           <p><span>Valor:</span><br> R$7.000.000,00</p>
         </div>

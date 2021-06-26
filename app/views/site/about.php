@@ -59,8 +59,13 @@
 
 						<center>
 						<table width="1000" height="250">
-							<tr>	<td rowspan="2" class="imagem1"></td>	<td class="imagem2"></td></tr>
-							<tr>											<td class="imagem3"></td></tr>
+							<tr>	
+								<td rowspan="2" class="imagem1"><img src="../../../public/img/fundadores.jpg" alt=""></td>	
+								<td class="imagem2"><img src="../../../public/img/acervo.jpg" alt=""></td>
+							</tr>
+							<tr>											
+								<td class="imagem3"><img src="../../../public/img/fundadoresAtual.jpg" alt=""></td>
+							</tr>
 						</table>
 						<p class="legenda-grid legenda-imagens">Foto 1: Fundadores em 2021 | Foto 2: Primeiro acervo | Foto 3: Fundadores atualmente</p>
 

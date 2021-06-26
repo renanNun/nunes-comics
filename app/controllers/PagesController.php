@@ -20,6 +20,12 @@ class PagesController {
     return view('site/items', compact('products'));
   }
 
+  public function product() {
+    $product = App::get('database')->select('produtos', $_POST['id']);
+
+    return view('site/item', compact('product'));
+  }
+
   public function about() {
     return view('site/about');
   }
