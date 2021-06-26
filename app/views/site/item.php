@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="../../../public/css/navbar.css">
   <link rel="stylesheet" href="../../../public/css/footer.css">
   
-  <title><?= $product->name ?> | Nunes' Comics</title>
+  <title>Produto | Nunes' Comics</title>
 </head>
 <body>
 
@@ -46,12 +46,12 @@
         <div class="details">
           <h3><?= $product->name ?></h3>
           <p><span>Título:</span><br><?= $product->name ?></p>
-          <p><span>Categoria:</span><br> Junho, 1938</p>
+          <p><span>Categorias:</span><br> <?= $category->nome ?></p>
           <p>
             <span>Descrição:</span><br> 
             <?= $product->description ?>
           </p>
-          <p><span>Valor:</span><br> R$7.000.000,00</p>
+          <p><span>Valor:</span><br> <?= $product->preco ?></p>
         </div>
       </section>
       <section class="actions">

@@ -22,8 +22,10 @@ class PagesController {
 
   public function product() {
     $product = App::get('database')->select('produtos', $_POST['id']);
+    $category = App::get('database')->select('categorias', $product->fk_category);
 
-    return view('site/item', compact('product'));
+
+    return view('site/item', compact('product', 'category'));
   }
 
   public function about() {
