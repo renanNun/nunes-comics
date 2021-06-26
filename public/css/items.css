@@ -303,13 +303,17 @@ section .categories ul li.active {
   transition-delay: 0.3s;
 }
 
-.itemBox .details a {
+.itemBox .details form button {
+  padding: 0.5rem 1rem;
   color: #000;
+  background: var(--yellow);
   border: 2px solid #000;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all .4s;
 }
 
-.itemBox .details a:hover {
-  text-decoration: none;
+.itemBox .details form button:hover {
   background: #000;
   color: var(--yellow);
 }
