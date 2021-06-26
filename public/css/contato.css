@@ -32,8 +32,9 @@ main {
     width: 100%;
   }
 
-  .logo img{
+  .logo-page img {
     width: 25%;
+    margin-top: 3rem;
   }
   .font{
     font-family: 'Bangers', sans-serif;
@@ -178,6 +179,14 @@ main {
   @media (max-width: 600px) {
     html {
       font-size: 87.5%; /* 14px */
+    }
+
+    .logo-page img {
+      display: none;
+    }
+
+    .title-contact {
+      margin-top: 5rem;
     }
   
     .socials div{
