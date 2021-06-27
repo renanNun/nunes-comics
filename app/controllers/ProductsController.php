@@ -13,7 +13,7 @@ class ProductsController {
         $product = null;
         $categories = App::get('database')->selectAll('categorias');
 
-        return view('admin/admin-add-product', compact('action', 'title', 'editable', 'product', 'categories'));
+        return view('admin/products/admin-add-product', compact('action', 'title', 'editable', 'product', 'categories'));
     }
 
     public function viewProduct() {
@@ -23,7 +23,7 @@ class ProductsController {
         $product = App::get('database')->select('produtos', $_POST['id']);
         $category = App::get('database')->select('categorias', $product->fk_category);
 
-        return view('admin/admin-view-product', compact('action', 'title', 'editable', 'product', 'category'));
+        return view('admin/products/admin-view-product', compact('action', 'title', 'editable', 'product', 'category'));
     }
 
     public function editProduct()
@@ -34,7 +34,7 @@ class ProductsController {
         $product = App::get('database')->select('produtos', $_POST['id']);
         $categories = App::get('database')->selectAll('categorias');
 
-        return view('admin/admin-add-product', compact('action', 'title', 'editable', 'product', 'categories'));
+        return view('admin/products/admin-add-product', compact('action', 'title', 'editable', 'product', 'categories'));
     }
 
     public function index() {
@@ -58,7 +58,7 @@ class ProductsController {
 
         $total_pages = ceil($rows_count / $items_per_page);
 
-        return view('admin/admin-list-products', compact('products', 'page', 'total_pages'));
+        return view('admin/products/admin-list-products', compact('products', 'page', 'total_pages'));
     }
 
     public function create() {

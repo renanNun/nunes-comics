@@ -39,7 +39,7 @@
 		</header>
   		<main class="d-flex justify-content-center">
 			<div class="container">
-				<form method="POST" action="edit">
+				<form method="POST" action="/admin/users/edit">
 					<div>
 						<label>Nome: </label>
 						<input id="name" value="<?= $user->name ?>" autofocus type="text" name="name" size="34" placeholder="Informe seu nome">

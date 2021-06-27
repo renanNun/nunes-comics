@@ -14,7 +14,7 @@ class CategoriesController
         $editable = true;
         $category = null;
 
-        return view('admin/admin-add-category', compact('action', 'title', 'editable', 'category'));
+        return view('admin/categories/admin-add-category', compact('action', 'title', 'editable', 'category'));
     }
 
     public function viewCategory()
@@ -24,7 +24,7 @@ class CategoriesController
         $editable = false;
         $category = App::get('database')->select('categorias', $_POST['id']);
 
-        return view('admin/admin-add-category', compact('action', 'title', 'editable', 'category'));
+        return view('admin/categories/admin-add-category', compact('action', 'title', 'editable', 'category'));
     }
 
     public function editCategory()
@@ -34,7 +34,7 @@ class CategoriesController
         $editable = true;
         $category = App::get('database')->select('categorias', $_POST['id']);
 
-        return view('admin/admin-add-category', compact('action', 'title', 'editable', 'category'));
+        return view('admin/categories/admin-add-category', compact('action', 'title', 'editable', 'category'));
     }
 
     public function index()
@@ -59,7 +59,7 @@ class CategoriesController
 
         $total_pages = ceil($rows_count / $items_per_page);
 
-        return view('admin/admin-list-categories', compact('categories', 'page', 'total_pages'));
+        return view('admin/categories/admin-list-categories', compact('categories', 'page', 'total_pages'));
     }
 
     public function create()

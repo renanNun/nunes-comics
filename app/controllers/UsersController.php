@@ -20,8 +20,27 @@ class UsersController
 
     public function index()
     {
-        $users = App::get('database')->selectAll('users');
-        return view('admin/users/view-users', compact('users'));
+        $page = 1;
+
+        if (isset($_GET['pagina']) && !empty($_GET['pagina']))
+        {
+            $page = intval($_GET['pagina']);
+
+            if ($page <= 0)
+            {
+                redirect('admin/users/list');
+            }
+        }
+
+        $items_per_page = 10;
+        $start_limit = $items_per_page * $page - $items_per_page;
+
+        $users = App::get('database')->selectAll('users', $start_limit, $items_per_page);
+        $rows_count = App::get('database')->countAll('users');
+
+        $total_pages = ceil($rows_count / $items_per_page);
+
+        return view('admin/users/view-users', compact('users', 'page', 'total_pages'));
     }
 
     public function store()
@@ -50,21 +69,21 @@ class UsersController
         if(!empty($_POST['pic'])){
             $file = "../../../public/img/users/" . $_POST['pic'];
 
-            App::get('database')->edit('users', $_POST['id'],
+            App::get('database')->edit('users',
             [
                 'name' => $_POST['name'],
                 'email' => $_POST['email'],
                 'password' => $encript,
                 'pic' => $file 
-            ]);
+            ], $_POST['id']);
         }
         else{
-            App::get('database')->edit('users', $_POST['id'],
+            App::get('database')->edit('users',
             [
                 'name' => $_POST['name'],
                 'email' => $_POST['email'],
                 'password' => $encript
-            ]);
+            ], $_POST['id']);
         }
 
 

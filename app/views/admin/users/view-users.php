@@ -88,29 +88,8 @@
         </tbody>
       </table>
 
-      <nav aria-label="Page navigation" class="mt-3">
-        <ul class="pagination ">
-          <li class="page-item">
-            <a class="page-link text-dark" href="#" aria-label="Previous" onclick="highlightPreviousButton();">
-              <span aria-hidden="true">&laquo;</span>
-            </a>
-          </li>
-          <li class="page-item active">
-            <a class="page-link text-dark" href="#" onclick="highlightButton(this);">1</a>
-          </li>
-          <li class="page-item">
-            <a class="page-link text-dark" href="#" onclick="highlightButton(this);">2</a>
-          </li>
-          <li class="page-item">
-            <a class="page-link text-dark" href="#" onclick="highlightButton(this);">3</a>
-          </li>
-          <li class="page-item">
-            <a class="page-link text-dark" href="#" aria-label="Next" onclick="highlightNextButton();">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <?php require("./app/views/includes/pagination.php") ?>
+
     </div>
     <?php endif ?>
   </main>
