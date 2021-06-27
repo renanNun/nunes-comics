@@ -64,6 +64,11 @@ main {
 	align-items: center;
 }
 
+.container .pagination .active a {
+	background-color: var(--yellow);
+	border: 1px solid var(--yellow);
+}
+
 
 /* page halftone details ---------------------------------------------------- */
 .halftone {
