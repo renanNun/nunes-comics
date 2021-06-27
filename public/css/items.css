@@ -2,6 +2,17 @@ main {
   margin-top: 10rem;
 }
 
+main .pagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8rem;
+}
+
+main .pagination .page-item.active .page-link {
+  background-color: var(--yellow);
+  border: 1px solid var(--yellow);
+}
+
 /* search ------------------------------------------------------------------- */
 .search {
   position: relative;
@@ -125,7 +136,7 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 8rem auto;
+  margin: 8rem auto 2rem auto;
 }
 
 section header {

@@ -35,7 +35,7 @@ class QueryBuilder
         }
     }
 
-    public function selectColumn($table, $column, $value)
+    public function selectColumn($table, $column, $value, $start_limit = null, $rows_amount = null)
     {
 
         $sql = sprintf(
@@ -48,6 +48,11 @@ class QueryBuilder
             $sql = $sql . "  LIKE '%" . $value . "%'";
         } else {
             $sql = $sql . " LIKE " . $value ;
+        }
+
+        if  ($start_limit >= 0 && $rows_amount > 0)
+        {
+            $sql .= " LIMIT {$start_limit}, {$rows_amount}";
         }
 
         try {

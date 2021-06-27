@@ -1,5 +1,5 @@
 <header>
-  <nav>
+  <nav id="navbar">
     <input type="checkbox" id="check">
     <label for="check" class="checkbtn">
       <img src="../../../public/assets/hamburger-menu.svg" alt="">
