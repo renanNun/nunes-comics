@@ -27,8 +27,6 @@
 
 <body>
 	<header>
-
-
 	</header>
 
 	<main>

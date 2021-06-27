@@ -9,9 +9,9 @@
     </label>
     <ul>
       <li><a class="active" href="#">Home</a></li>
-      <li><a href="./about">Quem Somos</a></li>
-      <li><a href="./items">Produtos</a></li>
-      <li><a href="./contact">Contato</a></li>
+      <li><a href="about">Quem Somos</a></li>
+      <li><a href="items">Produtos</a></li>
+      <li><a href="contact">Contato</a></li>
     </ul>
   </nav>
 </header>

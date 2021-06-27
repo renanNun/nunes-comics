@@ -31,7 +31,7 @@
     <div class="container mr-5 ">
       <div class="titulo d-flex justify-content-between align-items-center mb-3">
         <h1 class="mb-0">Usuário</h1>
-        <a href="view-users.html" class="buttons">Voltar</a>
+        <a href="list" class="buttons">Voltar</a>
       </div>
       <table class="table justify-content-center table-borderless mb-0 table-changes">
         <thead>
@@ -43,11 +43,10 @@
         </thead>
         <tbody>
           <tr >
-            <th scope="row">1</th>
-            <td>Pedroenrick</td>
-            <td class="d-flex justify-content-start flex-wrap ">
-              Pedro_penna22@hotmail.com
-            </td>
+            <th scope="row"><?= $user->id ?></th>
+            <td><?= $user->name ?></td>
+            <td class="d-flex justify-content-start flex-wrap "><?= $user->email ?></td>
+            <img class="avatar" src="<?= $user->pic ?>" />
           </tr>
         </tbody>
       </table>

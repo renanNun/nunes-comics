@@ -15,26 +15,12 @@
   <link rel="stylesheet" href="../../../public/css/navbar.css">
   <link rel="stylesheet" href="../../../public/css/footer.css">
   
-  <title>Produto | Nunes' Comics</title>
+  <title><?= $product->name ?> | Nunes' Comics</title>
 </head>
 <body>
 
   <header>
-    <nav>
-      <input type="checkbox" id="check">
-      <label for="check" class="checkbtn">
-        <img src="../../../public/assets/hamburger-menu.svg" alt="">
-      </label>
-      <label class="logo">
-        <a href="/"><img src="../../../public/assets/logo.png" alt=""></a>
-      </label>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">Quem Somos</a></li>
-        <li><a href="/items">Produtos</a></li>
-        <li><a href="/contato">Contato</a></li>
-      </ul>
-    </nav>
+    <?php require('app/views/includes/header.php') ?>
   </header>
 
   <main>
@@ -141,7 +127,6 @@
         <span>Rua José Lourenço Kelmer, UFJF, Instituto de Ciências Exatas, sala 3313</span>
       </div>
     </div>
-  </footer>
-  
+    </footer>
 </body>
 </html>
