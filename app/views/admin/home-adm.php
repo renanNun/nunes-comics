@@ -66,7 +66,7 @@
           </div>
           <div class="card-body">
             <h1 class="card-title ">Gerenciar Produtos</h1>
-            <button type="button" class="w-100 btn btn-lg btn-primary">Acessar</button>
+            <a type="button" href="products/list" class="w-100 btn btn-lg btn-primary">Acessar</a>
           </div>
         </div>
       </div>
