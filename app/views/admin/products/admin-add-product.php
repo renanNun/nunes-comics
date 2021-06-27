@@ -16,7 +16,7 @@
 
 	<!-- css -->
 	<link rel="stylesheet" href="../../../public/css/global.css">
-	<!-- <link rel="stylesheet" href="../../../public/css/adm-produtos-add.css"> -->
+
 	<link rel="stylesheet" href="../../../public/css/admin-add-produtos.css">
 	<link rel="stylesheet" href="../../../public/css/navbar-adm.css">
 
@@ -33,7 +33,11 @@
 
 	<main>
 		<div class="container">
+<<<<<<< HEAD:app/views/admin/products/admin-add-products.php
+			<form method="POST" action="/admin/list-user">
+=======
 			<form method="POST" action="/admin/products/<?= $action; ?>">
+>>>>>>> main:app/views/admin/admin-add-product.php
 				<fieldset>
 					<legend><?= $title ?></legend>
 					<div class="form-item">
@@ -102,9 +106,13 @@
 					<input type="hidden" id="id" name="id" value="<?= $product ? $product->id : "" ?>">
 
 					<div class="form-item form-buttons">
+<<<<<<< HEAD:app/views/admin/products/admin-add-products.php
+						<button type="submit" >Salvar</button>
+=======
 							<button type="submit" class="button" name="con-enviar" id="con-enviar">
 								<span class="font-contact">Salvar</span>
 							</button>
+>>>>>>> main:app/views/admin/admin-add-product.php
 						<button type="reset" value="reset">Resetar</button>
 					</div>
 				</fieldset>

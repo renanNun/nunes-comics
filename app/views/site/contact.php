@@ -23,23 +23,7 @@
 <body>
 
     <?php require("./app/views/includes/navbar.php") ?>
-    <!-- <header>
-      <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-          <img src="../../../public/assets/hamburger-menu.svg" alt="">
-        </label>
-        <label class="logo">
-          <a href="/"><img src="../public/assets/logo.png" alt=""></a>
-        </label>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">Quem Somos</a></li>
-          <li><a href="/items">Produtos</a></li>
-          <li><a class="active" href="#">Contato</a></li>
-        </ul>
-      </nav>
-    </header> -->
+    
     <main>
         <div class="page">
             <div class="logo-page">
@@ -54,14 +38,12 @@
                 <form action="/contact/send" method="POST">
                     <div>
                         <label for="Nome" class="font">Nome:</label>
-                        <input type="text" autofocus required="required" name="nome" id="nome"
-                            placeholder="Informe seu nome">
+                        <input type="text" autofocus required="required" name="nome" id="nome" placeholder="Informe seu nome">
                     </div>
 
                     <div>
                         <label for="Telefone" class="font">Telefone:</label>
-                        <input type="text" class="telefone" name="telefone" required="required" maxlength="17"
-                            id="telefone" placeholder="(99) 9 9999-9999">
+                        <input type="text" class="telefone" name="telefone" required="required" maxlength="17" id="telefone" placeholder="(99) 9 9999-9999">
                     </div>
 
                     <div>
@@ -71,14 +53,12 @@
 
                     <div>
                         <label for="Assunto" class="font">Assunto:</label>
-                        <input type="text" class="form-control" required="required" name="assunto" id="assunto"
-                            placeholder="Assunto">
+                        <input type="text" class="form-control" required="required" name="assunto" id="assunto" placeholder="Assunto">
                     </div>
 
                     <div>
                         <label for="Textarea" class="font">Mensagem:</label>
-                        <textarea style="resize:none;" name="textarea" id="textarea" required="required" rows="3"
-                            placeholder="Digite sua mensagem aqui."></textarea>
+                        <textarea style="resize:none;" name="textarea" id="textarea" required="required" rows="3" placeholder="Digite sua mensagem aqui."></textarea>
                     </div>
 
                     <div>
@@ -114,8 +94,7 @@
                 </div>
             </div>
             <div class="map">
-                <iframe loading="lazy" allowfullscreen
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29642.271456992898!2d-43.37174002049676!3d-21.76926947850989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x989b9e2bea807b%3A0x7ac85ca76e3d3d1d!2sCode%20Jr.!5e0!3m2!1spt-BR!2sbr!4v1580241016764!5m2!1spt-BR!2sbr">
+                <iframe loading="lazy" allowfullscreen src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29642.271456992898!2d-43.37174002049676!3d-21.76926947850989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x989b9e2bea807b%3A0x7ac85ca76e3d3d1d!2sCode%20Jr.!5e0!3m2!1spt-BR!2sbr!4v1580241016764!5m2!1spt-BR!2sbr">
                 </iframe>
             </div>
         </div>

@@ -79,6 +79,8 @@
 					</tbody>
 				</table>
 			</div>
+
+			<?php require("./app/views/includes/pagination.php") ?>
 		</div>
 
 	</main>

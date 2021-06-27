@@ -44,7 +44,7 @@
 							id="category" 
 							type="text" 
 							name="name" 
-							value="<?= $category ? $category->name : "" ?>" 
+							value="<?= $category ? $category->nome : "" ?>" 
 							<?= !$editable ? "readonly" : "" ?>
 							>
 						</div>

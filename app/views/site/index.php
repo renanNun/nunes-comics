@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +10,7 @@
 
   <!-- carousel -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  
+
   <!-- css -->
   <link rel="stylesheet" href="../../../public/css/global.css">
   <link rel="stylesheet" href="../../../public/css/home.css">
@@ -20,41 +21,25 @@
 
   <title>Home | Nunes' Comics</title>
 </head>
+
 <body>
 
   <div class="wrap">
     <?php require("./app/views/includes/navbar.php") ?>
-    <!-- <header>
-      <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-          <img src="../../../public/assets/hamburger-menu.svg" alt="">
-        </label>
-        <label class="logo">
-          <a href="/"><img src="../../../public/assets/logo.png" alt=""></a>
-        </label>
-        <ul>
-          <li><a class="active" href="#">Home</a></li>
-          <li><a href="/about">Quem Somos</a></li>
-          <li><a href="/items">Produtos</a></li>
-          <li><a href="/contact">Contato</a></li>
-        </ul>
-      </nav>
-    </header> -->
   
     <main>
       <div class="latest">
         <h2>Últimos Lançamentos</h2>
         <div class="swiper-container">
           <div class="swiper-wrapper">
-            <?php foreach($products as $product) { ?>
+            <?php foreach ($products as $product) { ?>
               <div class="swiper-slide"><img src="<?= $product->foto ?>" class="comic-cover" alt=""></div>
             <?php }; ?>
           </div>
           <div class="swiper-pagination"></div>
         </div>
       </div>
-  
+
       <div class="info">
         <div class="content">
           <h3>Teste</h3>
@@ -101,4 +86,5 @@
   </script>
 
 </body>
+
 </html>

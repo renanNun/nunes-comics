@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,29 +17,13 @@
   <link rel="stylesheet" href="../../../public/css/footer.css">
 
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  
+
   <title>Produtos | Nunes' Comics</title>
 </head>
+
 <body>
 
   <?php require("./app/views/includes/navbar.php") ?>
-  <!-- <header>
-    <nav>
-      <input type="checkbox" id="check">
-      <label for="check" class="checkbtn">
-        <img src="../../../public/assets/hamburger-menu.svg" alt="">
-      </label>
-      <label class="logo">
-        <a href="/"><img src="../../../public/assets/logo.png" alt=""></a>
-      </label>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">Quem Somos</a></li>
-        <li><a class="active" href="#">Produtos</a></li>
-        <li><a href="/contact">Contato</a></li>
-      </ul>
-    </nav>
-  </header> -->
   
   <main>
 
@@ -97,27 +82,27 @@
   <?php require("./app/views/includes/mask.php") ?>
 
   <!-- filter -->
-  <script> 
+  <script>
     const list = document.querySelectorAll('.list');
     const itemBox = document.querySelectorAll('.itemBox');
 
-    for(let i = 0; i < list.length; i++) {
+    for (let i = 0; i < list.length; i++) {
       list[i].addEventListener('click', function() {
-        for(let j = 0; j < list.length; j++) {
+        for (let j = 0; j < list.length; j++) {
           list[j].classList.remove('active');
         }
         this.classList.add('active');
 
         let dataFilter = this.getAttribute('data-filter');
 
-        for(let k = 0; k < itemBox.length; k++) {
+        for (let k = 0; k < itemBox.length; k++) {
           itemBox[k].classList.remove('active');
           itemBox[k].classList.add('hide');
 
           // debug
           console.log(itemBox[k].getAttribute('data-item'));
 
-          if(itemBox[k].getAttribute('data-item').includes(dataFilter) || dataFilter == 'all') {
+          if (itemBox[k].getAttribute('data-item').includes(dataFilter) || dataFilter == 'all') {
             itemBox[k].classList.remove('hide');
             itemBox[k].classList.add('active');
           }
@@ -140,4 +125,5 @@
   <?php require("./app/views/includes/footer.php") ?>
 
 </body>
+
 </html>

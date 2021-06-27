@@ -15,28 +15,11 @@
   <link rel="stylesheet" href="../../../public/css/navbar.css">
   <link rel="stylesheet" href="../../../public/css/footer.css">
   
-  <title>Produto | Nunes' Comics</title>
+  <title><?= $product->name ?> | Nunes' Comics</title>
 </head>
 <body>
 
   <?php require("./app/views/includes/navbar.php") ?>
-  <!-- <header>
-    <nav>
-      <input type="checkbox" id="check">
-      <label for="check" class="checkbtn">
-        <img src="../../../public/assets/hamburger-menu.svg" alt="">
-      </label>
-      <label class="logo">
-        <a href="/"><img src="../../../public/assets/logo.png" alt=""></a>
-      </label>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">Quem Somos</a></li>
-        <li><a href="/items">Produtos</a></li>
-        <li><a href="/contato">Contato</a></li>
-      </ul>
-    </nav>
-  </header> -->
 
   <main>
     <div class="container">
