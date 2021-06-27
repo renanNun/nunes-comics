@@ -45,10 +45,8 @@
           <tr >
             <th scope="row"><?= $user->id ?></th>
             <td><?= $user->name ?></td>
-            <td class="d-flex justify-content-start flex-wrap ">
-            <?= $user->email ?>
-            </td>
-            <img src="<?= $user->pic ?>" />
+            <td class="d-flex justify-content-start flex-wrap "><?= $user->email ?></td>
+            <img class="avatar" src="<?= $user->pic ?>" />
           </tr>
         </tbody>
       </table>

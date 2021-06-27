@@ -59,6 +59,11 @@ body{
   border: 1px solid var(--yellow);
 }
 
+.avatar{
+  width: 120px;
+  margin-bottom: 10px;
+}
+
 /* page halftone details ---------------------------------------------------- */
 .halftone {
   position: fixed;

@@ -14,6 +14,7 @@ class UsersController
     public function show()
     {
         $user = App::get('database')->read('users', $_POST['id']);
+
         return view('admin/users/list-user', compact('user'));
     }
 
@@ -25,36 +26,47 @@ class UsersController
 
     public function store()
     {
-        if (isset($_FILES['pic'])) {
-            $extension = strtolower(substr($_FILES['pic']['name'], -4));
-            $new_name = md5(time()) . $extension;
-            $file = "/public/img/users";
-
-            move_uploaded_file($_FILES['pic']['new_name'], $file . $new_name);
-        }
-
-    
+        $file = "../../../public/img/users/" . $_POST['pic'];
         $encript =  md5($_POST['password']);
 
-        App::get('database')->insert('users', [
-            'name' => $_POST['name'],
-            'email' => $_POST['email'],
-            'password' => $encript,
-            'pic' => $_POST['pic']
-        ]);
+        if(isset($_POST['email']) && isset($_POST['name'])){
+
+            App::get('database')->insert('users', [
+                'name' => $_POST['name'],
+                'email' => $_POST['email'],
+                'password' => $encript,
+                'pic' => $file
+            ]);
+        }
 
         return redirect('admin/users/list');
     }
 
     public function edit()
     {
-        App::get('database')->edit('users', $_POST['id'],
-        [
-            'name' => $_POST['name'],
-            'email' => $_POST['email'],
-            'password' => $_POST['password'],
-            'pic' => $_POST['pic'] 
-        ]);
+        $file = "../../../public/img/users/" . $_POST['pic'];
+        $encript =  md5($_POST['password']);
+
+        if(!empty($_POST['pic'])){
+            $file = "../../../public/img/users/" . $_POST['pic'];
+
+            App::get('database')->edit('users', $_POST['id'],
+            [
+                'name' => $_POST['name'],
+                'email' => $_POST['email'],
+                'password' => $encript,
+                'pic' => $file 
+            ]);
+        }
+        else{
+            App::get('database')->edit('users', $_POST['id'],
+            [
+                'name' => $_POST['name'],
+                'email' => $_POST['email'],
+                'password' => $encript
+            ]);
+        }
+
 
         
         return redirect('admin/users/list');
