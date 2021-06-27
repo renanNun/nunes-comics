@@ -53,13 +53,7 @@
         </div>
     </div>
 
-	<div class="halftone bottom">
-        <img src="../../../public/assets/halftone-effect.svg" alt="">
-    </div>
-
-    <div class="halftone top">
-        <img src="../../../public/assets/halftone-effect.svg" alt="">
-    </div>
+	<?php require("./app/views/includes/mask.php") ?>
     
 </body>
 

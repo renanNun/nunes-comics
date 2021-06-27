@@ -8,10 +8,10 @@
       <a href="./index"><img src="../../../public/assets/logo.png" alt=""></a>
     </label>
     <ul>
-      <li><a class="active" href="#">Home</a></li>
-      <li><a href="./about">Quem Somos</a></li>
-      <li><a href="./items">Produtos</a></li>
-      <li><a href="./contact">Contato</a></li>
+      <li><a class="<?= $view_page == '/' ? "active" : "" ?>" href="/">Home</a></li>
+      <li><a class="<?= $view_page == '/about' ? "active" : "" ?>" href="./about">Quem Somos</a></li>
+      <li><a class="<?= $view_page == '/items' ? "active" : "" ?>" href="./items">Produtos</a></li>
+      <li><a class="<?= $view_page == '/contact' ? "active" : "" ?>" href="./contact">Contato</a></li>
     </ul>
   </nav>
 </header>

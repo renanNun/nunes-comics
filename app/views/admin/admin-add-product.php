@@ -18,6 +18,7 @@
 	<link rel="stylesheet" href="../../../public/css/global.css">
 	<!-- <link rel="stylesheet" href="../../../public/css/adm-produtos-add.css"> -->
 	<link rel="stylesheet" href="../../../public/css/admin-add-produtos.css">
+	<link rel="stylesheet" href="../../../public/css/navbar-adm.css">
 
 	<title>Admin | Nunes' Comics</title>
 
@@ -28,9 +29,7 @@
 </head>
 
 <body>
-	<header>
-
-	</header>
+	<?php require("./app/views/includes/navbar-adm.php") ?>
 
 	<main>
 		<div class="container">
@@ -113,12 +112,8 @@
 		</div>
 	</main>
 
-	<div class="halftone bottom">
-		<img src="../img/halftone-effect.svg" alt="">
-	</div>
-	<div class="halftone top">
-		<img src="../img/halftone-effect.svg" alt="">
-	</div>
+	<?php require("./app/views/includes/mask.php") ?>
+	
 </body>
 
 </html>
