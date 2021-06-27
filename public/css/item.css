@@ -4,7 +4,7 @@ body {
 
 .container {
   width: 60%;
-  height: 75vh;
+  height: 80vh;
   padding: 2rem;
   margin: auto;
   margin-top: 10rem;
@@ -21,6 +21,7 @@ body {
 .container .info {
   display: flex;
   justify-content: space-around;
+  margin-bottom: 3rem;
   height: 80%;
 }
 
@@ -43,6 +44,7 @@ body {
 .container .info .details h3 {
   font-size: 2.5rem;
   letter-spacing: 0.3rem;
+  line-height: 2rem;
   margin-bottom: 3rem;
 }
 
