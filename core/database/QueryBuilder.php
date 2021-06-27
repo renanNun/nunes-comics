@@ -56,10 +56,17 @@ class QueryBuilder
         }
     }
 
-    public function selectAll($table)
+    public function selectAll($table, $start_limit = null, $rows_amount = null)
     {
         try {
-            $statement = $this->pdo->prepare("SELECT * FROM {$table}");
+            $sql = "SELECT * FROM {$table}";
+
+            if  ($start_limit >= 0 && $rows_amount > 0)
+            {
+                $sql .= " LIMIT {$start_limit}, {$rows_amount}";
+            }
+
+            $statement = $this->pdo->prepare($sql);
     
             $statement->execute();
      
@@ -125,6 +132,19 @@ class QueryBuilder
             $statement->execute(compact('id'));
         } catch (Exception $e) {
             die("An error occurred when trying to delete from database: {$e->getMessage()}");
+        }
+    }
+
+    public function countAll($table)
+    {
+        try {
+            $statement = $this->pdo->prepare("SELECT COUNT(*) FROM {$table}");
+    
+            $statement->execute();
+
+            return intval($statement->fetch(PDO::FETCH_NUM)[0]);
+        } catch (Exception $e) {
+            die("An error occurred when trying to count from database: {$e->getMessage()}");
         }
     }
 
