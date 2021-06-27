@@ -4,65 +4,83 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "24fc649c742018383530447d21d438d0",
+    "content-hash": "d01b4a542231b112db557e6b7e5a5121",
     "packages": [
         {
-            "name": "coffeecode/uploader",
-            "version": "1.0.7",
+            "name": "phpmailer/phpmailer",
+            "version": "v6.4.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/robsonvleite/uploader.git",
-                "reference": "3117d7e8a77f97a2a20b5aa1f11f6a625d23b14c"
+                "url": "https://github.com/PHPMailer/PHPMailer.git",
+                "reference": "9256f12d8fb0cd0500f93b19e18c356906cbed3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robsonvleite/uploader/zipball/3117d7e8a77f97a2a20b5aa1f11f6a625d23b14c",
-                "reference": "3117d7e8a77f97a2a20b5aa1f11f6a625d23b14c",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/9256f12d8fb0cd0500f93b19e18c356906cbed3d",
+                "reference": "9256f12d8fb0cd0500f93b19e18c356906cbed3d",
                 "shasum": ""
             },
             "require": {
-                "ext-exif": "*",
-                "ext-gd": "*",
-                "ext-mbstring": "*",
-                "php": "^7.2"
+                "ext-ctype": "*",
+                "ext-filter": "*",
+                "ext-hash": "*",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+                "doctrine/annotations": "^1.2",
+                "phpcompatibility/php-compatibility": "^9.3.5",
+                "roave/security-advisories": "dev-latest",
+                "squizlabs/php_codesniffer": "^3.5.6",
+                "yoast/phpunit-polyfills": "^0.2.0"
+            },
+            "suggest": {
+                "ext-mbstring": "Needed to send email in multibyte encoding charset or decode encoded addresses",
+                "hayageek/oauth2-yahoo": "Needed for Yahoo XOAUTH2 authentication",
+                "league/oauth2-google": "Needed for Google XOAUTH2 authentication",
+                "psr/log": "For optional PSR-3 debug logging",
+                "stevenmaguire/oauth2-microsoft": "Needed for Microsoft XOAUTH2 authentication",
+                "symfony/polyfill-mbstring": "To support UTF-8 if the Mbstring PHP extension is not enabled (^1.2)"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "CoffeeCode\\Uploader\\": "src"
+                    "PHPMailer\\PHPMailer\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "LGPL-2.1-only"
             ],
             "authors": [
                 {
-                    "name": "Robson V. Leite",
-                    "email": "cursos@upinside.com.br",
-                    "role": "Developer"
+                    "name": "Marcus Bointon",
+                    "email": "phpmailer@synchromedia.co.uk"
                 },
                 {
-                    "name": "Tiago Chini",
-                    "email": "tiago.chini@hotmail.com",
-                    "role": "collaborator"
+                    "name": "Jim Jagielski",
+                    "email": "jimjag@gmail.com"
+                },
+                {
+                    "name": "Andy Prevost",
+                    "email": "codeworxtech@users.sourceforge.net"
+                },
+                {
+                    "name": "Brent R. Matzelle"
                 }
             ],
-            "description": "It is a easy PHP upload manager for images, files and media in your application",
-            "homepage": "http://www.upinside.com.br",
-            "keywords": [
-                "Coffeecode",
-                "Image upload",
-                "file upload",
-                "media upload",
-                "upinside",
-                "upload"
-            ],
+            "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
             "support": {
-                "issues": "https://github.com/robsonvleite/uploader/issues",
-                "source": "https://github.com/robsonvleite/uploader/tree/1.0.7"
+                "issues": "https://github.com/PHPMailer/PHPMailer/issues",
+                "source": "https://github.com/PHPMailer/PHPMailer/tree/v6.4.1"
             },
-            "time": "2019-07-08T23:06:18+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/Synchro",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-04-29T12:25:04+00:00"
         }
     ],
     "packages-dev": [],
@@ -73,5 +91,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }

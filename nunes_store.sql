@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Jun 20, 2021 at 06:24 PM
--- Server version: 5.7.31
--- PHP Version: 7.3.21
+-- Host: 127.0.0.1
+-- Tempo de geração: 22-Jun-2021 às 20:47
+-- Versão do servidor: 10.4.19-MariaDB
+-- versão do PHP: 8.0.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,54 +18,90 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `nunes_store`
+-- Banco de dados: `nunes_store`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categories`
+-- Estrutura da tabela `categorias`
 --
 
-DROP TABLE IF EXISTS `categories`;
-CREATE TABLE IF NOT EXISTS `categories` (
+CREATE TABLE `categorias` (
   `id` int(11) NOT NULL,
-  `name` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `nome` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `categorias`
+--
+
+INSERT INTO `categorias` (`id`, `nome`) VALUES
+(0, 'Marvel');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `products`
+-- Estrutura da tabela `produtos`
 --
 
-DROP TABLE IF EXISTS `products`;
-CREATE TABLE IF NOT EXISTS `products` (
+CREATE TABLE `produtos` (
   `id` int(11) NOT NULL,
-  `name` varchar(50) DEFAULT NULL,
-  `quatity` int(11) DEFAULT NULL,
-  `category` varchar(70) DEFAULT NULL,
-  `pic` varchar(200) DEFAULT NULL,
-  `price` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
+  `name` varchar(30) DEFAULT NULL,
+  `estoque` int(11) DEFAULT NULL,
+  `description` varchar(200) NOT NULL,
+  `foto` varchar(50) DEFAULT NULL,
+  `preco` float(7,2) DEFAULT NULL,
+  `fk_category` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Table structure for table `users`
+-- Extraindo dados da tabela `produtos`
 --
 
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `pic` varchar(70) NOT NULL,
-  `password` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
+INSERT INTO `produtos` (`id`, `name`, `estoque`, `description`, `foto`, `preco`, `fk_category`) VALUES
+(1, 'Wolverine', 32, ' dsfsasafafas  ', '../../../public/img/item4.jpg', 24.90, 0),
+(3, 'Superman', 1, '', '../../../public/img/item3.jpg', 7000.00, 0),
+(28, 'teste edição', 13, 'erdsadfsdsdsa', NULL, 22.00, 0),
+(29, 'teste', 13, ' fdsfdsfdfsdfdsfs', NULL, 233.00, 0),
+(30, 'teste categorua', 2, 'DSadsanfksajkdas ', NULL, 22.00, 0);
+
+--
+-- Índices para tabelas despejadas
+--
+
+--
+-- Índices para tabela `categorias`
+--
+ALTER TABLE `categorias`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Índices para tabela `produtos`
+--
+ALTER TABLE `produtos`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_categoria` (`fk_category`);
+
+--
+-- AUTO_INCREMENT de tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `produtos`
+--
+ALTER TABLE `produtos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+
+--
+-- Restrições para despejos de tabelas
+--
+
+--
+-- Limitadores para a tabela `produtos`
+--
+ALTER TABLE `produtos`
+  ADD CONSTRAINT `fk_categoria` FOREIGN KEY (`fk_category`) REFERENCES `categorias` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

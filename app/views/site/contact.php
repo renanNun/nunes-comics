@@ -27,8 +27,8 @@
     </header>
     <main>
         <div class="page">
-            <div class="logo">
-                <a href="index.html"><img src="../../../public/assets/logo.png" alt="logo nunes comics"></a>
+            <div class="logo-page">
+                <a href="/"><img src="../../../public/assets/logo.png" alt="logo nunes comics"></a>
             </div>
             <div>
                 <h1 class="title-contact font">Entre em Contato</h1>
@@ -36,7 +36,7 @@
         </div>
         <div class="row">
             <div class="info">
-                <form action="">
+                <form action="/contact/send" method="POST">
                     <div>
                         <label for="Nome" class="font">Nome:</label>
                         <input type="text" autofocus required="required" name="nome" id="nome"
