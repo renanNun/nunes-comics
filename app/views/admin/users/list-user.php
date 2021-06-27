@@ -26,7 +26,8 @@
 </head>
 
 <body>
-  <header></header>
+  <?php require("./app/views/includes/navbar-admin.php") ?>
+
   <main class="d-flex justify-content-center">
     <div class="container mr-5 ">
       <div class="titulo d-flex justify-content-between align-items-center mb-3">

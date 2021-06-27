@@ -33,7 +33,14 @@
         <div class="swiper-container">
           <div class="swiper-wrapper">
             <?php foreach ($products as $product) { ?>
-              <div class="swiper-slide"><img src="<?= $product->foto ?>" class="comic-cover" alt=""></div>
+              <div class="swiper-slide">
+                <form action="item" method="POST">
+                  <input type="hidden" name="id" value="<?= $product->id ?>">
+                  <button type="submit">
+                    <img src="<?= $product->foto ?>" class="comic-cover" alt="">
+                  </button>
+                </form>
+              </div>
             <?php }; ?>
           </div>
           <div class="swiper-pagination"></div>

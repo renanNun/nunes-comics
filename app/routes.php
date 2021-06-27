@@ -88,4 +88,11 @@ $router->post('admin/categories/update', 'CategoriesController@edit');
 $router->post('admin/categories/delete', 'CategoriesController@delete');
 
 $router->post('contact/send', 'ContactController@sendEmail');
+
+
+
+// Routes login
+$router->post('login', 'LoginController@makeLogin');
+$router->post('logout', 'LoginController@logout');
+
 ?>

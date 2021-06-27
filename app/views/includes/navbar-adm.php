@@ -12,7 +12,10 @@
         </div>
 
         <div class="area-direita">
-            <a href="/login" class="logout_bnt" title="Logout"><i class="fas fa-sign-out-alt"></i></a>
+            <form action="/logout" method="POST">
+                
+                <button type="submit" class="logout_bnt" title="Logout"><i class="fas fa-sign-out-alt"></i></button>
+            </form>
         </div>
 
     </header>

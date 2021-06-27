@@ -47,7 +47,8 @@ class QueryBuilder
         if($column == 'name') {
             $sql = $sql . "  LIKE '%" . $value . "%'";
         } else {
-            $sql = $sql . " LIKE " . $value ;
+            // $sql = $sql . " LIKE " . $value;
+            $sql = $sql . " LIKE " . ':value';
         }
 
         if  ($start_limit >= 0 && $rows_amount > 0)
@@ -58,7 +59,11 @@ class QueryBuilder
         try {
             $statement = $this->pdo->prepare($sql);
     
-            $statement->execute();
+            if($column == 'name') {
+                $statement->execute();
+            } else {
+                $statement->execute(['value' => $value]);
+            }
 
             return $statement->fetchAll(PDO::FETCH_OBJ);
         } catch (Exception $e) {

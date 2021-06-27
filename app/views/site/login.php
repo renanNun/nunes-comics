@@ -20,35 +20,41 @@
      <div class="container-login">
 		
         <div class="tela-login">
+            <form action="login" method="POST">
+
+                <h1>Login</h1>
+                
+                <div class="input-field">
+                
+                    <input name="email" type="text" class="form-control" id="E-mail" placeholder="">
+                    <label for="email">E-mail</label>
+
+                </div> 	
+
+                <div class="input-field">
+                
+                    <input name="password" type="password" class="form-control" id="Senha" placeholder="">
+                    <label for="senha">Senha</label>
+
+                </div> 
+
+                <div class="center">
+                    
+                    <button type="submit">Entrar</button>
+                
+                </div>
+                
+                <div class="links">
+                    
+                    <a  href="#"><p>Novo, por aqui? Regitre-se.</p></a>
+                    <a  href="#"><p>Esqueceu a senha?</p></a>
+
+                </div>
+
+
+            </form>
   			
-             <h1>Login</h1>
-    
-            <div class="input-field">
-               
-                <input type="text" class="form-control" id="E-mail" placeholder="">
-                <label for="email">E-mail</label>
-    
-            </div> 	
-
-            <div class="input-field">
-             
-     		    <input type="password" class="form-control" id="Senha" placeholder="">
-                <label for="senha">Senha</label>
-    
-            </div> 
-
-            <div class="center">
-    			
-                <button>Entrar</button>
-  			 
-            </div>
- 			
- 		    <div class="links">
-  				
-  				<a  href="#"><p>Novo, por aqui? Regitre-se.</p></a>
-  				<a  href="#"><p>Esqueceu a senha?</p></a>
-      
-            </div>
+            
 		
         </div>
     </div>

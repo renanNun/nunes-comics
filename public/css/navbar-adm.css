@@ -10,6 +10,7 @@ header {
 
 	position: fixed;
 	background: #F9E757;
+	border-bottom: 1px solid black;
 	/* padding: 20px; */
 	width: 100%;
 	height: 60px;
@@ -32,6 +33,7 @@ header label {
 	background:#4E6B71;
 	text-decoration: none;
 	float: right;
+	border: 1px solid black;
 	/* margin-top: -30px; */
 	margin-right: 40px;
 	font-size: 22px;
@@ -47,7 +49,7 @@ header label {
 }
 
 .sidebar {
-	background: #fde31fa2;
+	background: var(--yellow);
 	margin-top: 60px;
 	padding-top: 30px;
 	position: fixed;
@@ -56,6 +58,7 @@ header label {
 	height: 100%;
 	transition: 0.5s;
 	transition-property: left;
+	border-right: 1px solid black;
 }
 
 .sidebar .profile-pic {
@@ -103,7 +106,7 @@ label #sidebar_bnt:hover {
 }
 
 #check:checked ~ .sidebar {
-	left: -150px;
+	left: -200px;
 }
 
 #check:checked ~ .sidebar a span {

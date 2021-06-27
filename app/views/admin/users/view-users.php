@@ -24,9 +24,7 @@
 </head>
 
 <body>
-  <header>
-
-  </header>
+  <?php require("./app/views/includes/navbar-adm.php") ?>
 
   <main class="d-flex justify-content-center">
     <div class="container">

@@ -5,10 +5,13 @@ namespace App\Controllers;
 use App\Core\App;
 use Exception;
 
-class CategoriesController
+class CategoriesController extends LoginController
 {
     public function addCategory()
     {
+        session_start();
+        $this->sessionVerify();
+        
         $action = 'create';
         $title = 'Crie uma nova categoria';
         $editable = true;
@@ -19,6 +22,9 @@ class CategoriesController
 
     public function viewCategory()
     {
+        session_start();
+        $this->sessionVerify();
+
         $action = '';
         $title = 'Visualização da categoria';
         $editable = false;
@@ -29,6 +35,9 @@ class CategoriesController
 
     public function editCategory()
     {
+        session_start();
+        $this->sessionVerify();
+
         $action = 'update';
         $title = 'Edite a categoria';
         $editable = true;
@@ -39,6 +48,9 @@ class CategoriesController
 
     public function index()
     {
+        session_start();
+        $this->sessionVerify();
+
         $page = 1;
 
         if (isset($_GET['pagina']) && !empty($_GET['pagina']))

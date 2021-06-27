@@ -5,8 +5,11 @@ namespace App\Controllers;
 use App\Core\App;
 use Exception;
 
-class ProductsController {
+class ProductsController extends LoginController {
     public function addProduct() {
+        session_start();
+        $this->sessionVerify();
+
         $action = 'create';
         $title = 'Crie um novo produto';
         $editable = true;
@@ -17,6 +20,9 @@ class ProductsController {
     }
 
     public function viewProduct() {
+        session_start();
+        $this->sessionVerify();
+
         $action = '';
         $title = 'Visualização do produto';
         $editable = false;
@@ -28,6 +34,9 @@ class ProductsController {
 
     public function editProduct()
     {
+        session_start();
+        $this->sessionVerify();
+
         $action = 'update';
         $title = 'Edite um produto existente';
         $editable = true;
@@ -38,6 +47,9 @@ class ProductsController {
     }
 
     public function index() {
+        session_start();
+        $this->sessionVerify();
+
         $page = 1;
 
         if (isset($_GET['pagina']) && !empty($_GET['pagina']))

@@ -4,15 +4,19 @@ namespace App\Controllers;
 
 use App\Core\App;
 
-class UsersController
+class UsersController extends LoginController
 {
     public function createUser()
     {
+        session_start();
+        $this->sessionVerify();
         return view('admin/users/add-user');
     }
 
     public function show()
     {
+        session_start();
+        $this->sessionVerify();
         $user = App::get('database')->read('users', $_POST['id']);
 
         return view('admin/users/list-user', compact('user'));
@@ -20,6 +24,8 @@ class UsersController
 
     public function index()
     {
+        session_start();
+        $this->sessionVerify();
         $page = 1;
 
         if (isset($_GET['pagina']) && !empty($_GET['pagina']))
@@ -63,6 +69,8 @@ class UsersController
 
     public function edit()
     {
+        session_start();
+        $this->sessionVerify();
         $file = "../../../public/img/users/" . $_POST['pic'];
         $encript =  md5($_POST['password']);
 
@@ -86,13 +94,13 @@ class UsersController
             ], $_POST['id']);
         }
 
-
-        
         return redirect('admin/users/list');
     }
 
     public function showEdit()
     {
+        session_start();
+        $this->sessionVerify();
         $user = App::get('database')->read('users', $_POST['id']);
         return view('admin/users/edit-user', compact('user'));
     }
