@@ -63,6 +63,7 @@ main .container .field p {
 @media (max-width: 900px) {
 	main .container {
 		width: 60vw;
+        margin-top: 10rem;
 	}
 }
 

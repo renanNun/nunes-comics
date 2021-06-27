@@ -13,6 +13,7 @@ main .container {
 	background-color: var(--yellow);
 	border: 2px solid var(--black);
 	box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.25);
+	margin-top: 5rem;
 }
 
 main .container form fieldset {
@@ -117,7 +118,8 @@ main .container form fieldset #image-container img {
 	width: 5rem;
 	height: 5rem;
 	object-fit: cover;
-	border-radius: 1.5rem;
+	border: 1px solid black;
+	margin-bottom: 1rem;
 }
 
 main .container form fieldset .form-buttons button {
@@ -170,6 +172,7 @@ main .container form fieldset .form-buttons button + button {
 @media (max-width: 900px) {
 	main .container {
 		width: 60vw;
+		margin-top: 10rem;
 	}
 }
 

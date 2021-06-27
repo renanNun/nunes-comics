@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="../../../public/css/global.css">
   <link rel="stylesheet" href="../../../public/css/admin-users.css">
   <link rel="stylesheet" href="../../../public/css/list-responsive.css">
+  <link rel="stylesheet" href="../../../public/css/navbar-adm.css">
 
   <title>Admin | Nunes' Comics</title>
 
@@ -26,7 +27,7 @@
 </head>
 
 <body>
-  <?php require("./app/views/includes/navbar-admin.php") ?>
+  <?php require("./app/views/includes/navbar-adm.php") ?>
 
   <main class="d-flex justify-content-center">
     <div class="container mr-5 ">

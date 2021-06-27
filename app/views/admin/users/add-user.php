@@ -19,24 +19,13 @@
 		<!-- css -->
 		<link rel="stylesheet" href="../../../../public/css/global.css">
 		<link rel="stylesheet" href="../../../../public/css/adm-add-user.css">
+		<link rel="stylesheet" href="../../../public/css/navbar-adm.css">
 
 		<title>Admin | Nunes' Comics</title>
 	</head>
 
 	<body>
-		<header class="d-flex justify-content-center">
-			<div class="row-div">
-				<div class="space">
-					<h1>Novo Usuário</h1>
-				</div>
-
-				<div class="space">
-					<a class="buttons" href="list">
-						Voltar
-					</a>
-				</div>
-			</div>
-		</header>
+		<?php require("./app/views/includes/navbar-adm.php") ?>
   		<main class="d-flex justify-content-center">
 			<div class="container">
 				<form method="POST" action="list">

@@ -34,12 +34,10 @@
           <div class="swiper-wrapper">
             <?php foreach ($products as $product) { ?>
               <div class="swiper-slide">
-                <form action="item" method="POST">
-                  <input type="hidden" name="id" value="<?= $product->id ?>">
-                  <button type="submit">
-                    <img src="<?= $product->foto ?>" class="comic-cover" alt="">
-                  </button>
+                <form id="items-<?= $product->id ?>" class="form-carousel" name="item" action="item" method="POST">
+                  <input value="<?= $product->id ?>" type="hidden" name="id">
                 </form>
+                <img onClick="sendForm(<?= $product->id ?>)" src="<?= $product->foto ?>" class="comic-cover" alt="">
               </div>
             <?php }; ?>
           </div>
@@ -67,6 +65,14 @@
     <?php require("./app/views/includes/footer.php") ?>
   
   </div>
+
+  <script>
+    function sendForm(id) {
+      const $form = document.querySelectorAll(`#items-${id}`);
+      
+      $form[0].submit();
+    }
+  </script>
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
