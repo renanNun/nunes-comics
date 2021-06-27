@@ -10,7 +10,7 @@ main {
 
 /* other info --------------------------------------------------------------- */
 .info {
-  margin: 8rem 0;
+  margin: 10rem 0;
   width: 70vw;
   padding: 5rem;
 
@@ -123,7 +123,7 @@ main {
 @media (max-width: 1000px) {
 
     .info {
-      margin: 3rem 0;
+      margin: 10rem 0;
       padding: 2rem;
    }
    
@@ -147,7 +147,7 @@ main {
 
 @media (max-width: 720px) {
   .info {
-      margin: 2rem 0;
+      margin: 10rem 0;
       padding: 1rem;
    }
 }
