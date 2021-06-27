@@ -49,3 +49,15 @@ function highlightPreviousButton() {
 		}
 	}
 }
+
+function handleSelectImage(event) {
+    if (!event.target.files.length) {
+      	return;
+    }
+
+    const selectedImages = Array.from(event.target.files);
+	const image = URL.createObjectURL(selectedImages[0]);
+	const imageContainer = document.querySelector("#image-container");
+
+	imageContainer.innerHTML = `<img src="${image}" alt="">`;
+}
