@@ -85,10 +85,10 @@
 	</main>
 
 	<div class="halftone bottom">
-		<img src="../img/halftone-effect.svg" alt="">
+		<img src="../../../public/assets/halftone-effect.svg" alt="">
 	</div>
 	<div class="halftone top">
-		<img src="../img/halftone-effect.svg" alt="">
+		<img src="../../../public/assets/halftone-effect.svg" alt="">
 	</div>
 
 	<!--javascript -->
