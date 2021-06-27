@@ -4,6 +4,7 @@ $router->get('about', 'PagesController@about');
 $router->get('contact', 'PagesController@contact');
 $router->get('login', 'PagesController@login');
 $router->get('items', 'PagesController@products');
+$router->post('items', 'PagesController@productsFilter');
 $router->post('item', 'PagesController@product');
 
   // public routes

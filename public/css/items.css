@@ -165,21 +165,14 @@ section .categories ul {
   flex-wrap: wrap;
 }
 
-section .categories ul li {
-  list-style: none;
-  background: var(--yellow);
+section .categories ul li button {
   padding: 12px 20px;
+  background: var(--yellow);
   margin: 20px;
   letter-spacing: 1px;
   cursor: pointer;
   border: 2px solid #000;
   box-shadow: 0 5px 10px 5px rgba(0,0,0,0.2);
-}
-
-section .categories ul li.active {
-  background: #000;
-  color: var(--yellow);
-  border: 2px solid var(--yellow);
 }
 
 /* products ----------------------------------------------------------------- */

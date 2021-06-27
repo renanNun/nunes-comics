@@ -35,6 +35,27 @@ class QueryBuilder
         }
     }
 
+    public function selectColumn($table, $column, $value)
+    {
+        $sql = sprintf(
+            'SELECT * FROM %s WHERE %s', 
+            $table,
+            $column
+        );
+
+        $sql = $sql . " LIKE {$value}";
+
+        try {
+            $statement = $this->pdo->prepare($sql);
+    
+            $statement->execute(compact('column'));
+
+            return $statement->fetch(PDO::FETCH_OBJ);
+        } catch (Exception $e) {
+            die("An error occurred when trying to select from database: {$e->getMessage()}");
+        }
+    }
+
     public function selectAll($table)
     {
         try {
