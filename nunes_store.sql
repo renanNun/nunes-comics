@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 22-Jun-2021 às 20:47
--- Versão do servidor: 10.4.19-MariaDB
--- versão do PHP: 8.0.6
+-- Tempo de geração: 27-Jun-2021 às 06:46
+-- Versão do servidor: 10.4.14-MariaDB
+-- versão do PHP: 7.4.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -37,7 +37,8 @@ CREATE TABLE `categorias` (
 --
 
 INSERT INTO `categorias` (`id`, `nome`) VALUES
-(0, 'Marvel');
+(1, 'Marvel'),
+(4, 'DC Comics');
 
 -- --------------------------------------------------------
 
@@ -60,11 +61,21 @@ CREATE TABLE `produtos` (
 --
 
 INSERT INTO `produtos` (`id`, `name`, `estoque`, `description`, `foto`, `preco`, `fk_category`) VALUES
-(1, 'Wolverine', 32, ' dsfsasafafas  ', '../../../public/img/item4.jpg', 24.90, 0),
-(3, 'Superman', 1, '', '../../../public/img/item3.jpg', 7000.00, 0),
-(28, 'teste edição', 13, 'erdsadfsdsdsa', NULL, 22.00, 0),
-(29, 'teste', 13, ' fdsfdsfdfsdfdsfs', NULL, 233.00, 0),
-(30, 'teste categorua', 2, 'DSadsanfksajkdas ', NULL, 22.00, 0);
+(1, 'Produto de Teste', 1, ' TESTE', '../../../public/img/products/item4.jpg', 100.00, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `pic` varchar(70) NOT NULL,
+  `password` varchar(100) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 --
 -- Índices para tabelas despejadas
@@ -84,14 +95,32 @@ ALTER TABLE `produtos`
   ADD KEY `fk_categoria` (`fk_category`);
 
 --
+-- Índices para tabela `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT de tabelas despejadas
 --
+
+--
+-- AUTO_INCREMENT de tabela `categorias`
+--
+ALTER TABLE `categorias`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `produtos`
 --
 ALTER TABLE `produtos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de tabela `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- Restrições para despejos de tabelas
