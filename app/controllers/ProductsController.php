@@ -38,9 +38,27 @@ class ProductsController {
     }
 
     public function index() {
-        $products = App::get('database')->selectAll('produtos');
+        $page = 1;
 
-        return view('admin/admin-list-products', compact('products'));
+        if (isset($_GET['pagina']) && !empty($_GET['pagina']))
+        {
+            $page = intval($_GET['pagina']);
+
+            if ($page <= 0)
+            {
+                redirect('admin/products/list');
+            }
+        }
+
+        $items_per_page = 10;
+        $start_limit = $items_per_page * $page - $items_per_page;
+
+        $products = App::get('database')->selectAll('produtos', $start_limit, $items_per_page);
+        $rows_count = App::get('database')->countAll('produtos');
+
+        $total_pages = ceil($rows_count / $items_per_page);
+
+        return view('admin/admin-list-products', compact('products', 'page', 'total_pages'));
     }
 
     public function create() {
