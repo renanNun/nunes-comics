@@ -60,10 +60,12 @@
           </ul>
         </div>
         <div class="search">
-          <div class="icon"></div>
-          <div class="input">
-            <input type="text" name="" id="mysearch" placeholder="Buscar...">
-          </div>
+          <form action="/items" method="POST" class="mb-1">
+            <div class="input">
+              <input type="text" name="search" id="mysearch" placeholder="Buscar...">
+            </div>
+            <button type="submit" class="icon"></button>
+          <form>
         </div>
       </header>
 
@@ -80,9 +82,9 @@
                 <p><span>Quantidade:</span> <?= "$product->estoque" ?></p>
                 <p><span>Preço:</span> R$<?= "$product->preco" ?></p>
               </div>
-              <form action="/item" method="POST" class="mb-1">
+              <form action="/item" method="POST">
                 <input type="hidden" name="id" value="<?= $product->id ?>">
-                <button type="submit">Visualizar</button>
+                <button type="submit">Ver Produto</button>
               </form>
             </div>
           </div>

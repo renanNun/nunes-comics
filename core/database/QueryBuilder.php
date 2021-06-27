@@ -37,13 +37,18 @@ class QueryBuilder
 
     public function selectColumn($table, $column, $value)
     {
+
         $sql = sprintf(
             'SELECT * FROM %s WHERE %s', 
             $table,
             $column
         );
 
-        $sql = $sql . " LIKE " . $value ;
+        if($column == 'name') {
+            $sql = $sql . "  LIKE '%" . $value . "%'";
+        } else {
+            $sql = $sql . " LIKE " . $value ;
+        }
 
         try {
             $statement = $this->pdo->prepare($sql);

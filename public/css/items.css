@@ -33,6 +33,7 @@ main {
   width: 60px;
   height: 60px;
   background: var(--yellow);
+  border: none;
   border-radius: 60px;
   display: flex;
   justify-content: center;
@@ -165,7 +166,7 @@ section .categories ul {
   flex-wrap: wrap;
 }
 
-section .categories ul li button {
+section .categories ul li form button {
   padding: 12px 20px;
   background: var(--yellow);
   margin: 20px;
@@ -175,7 +176,7 @@ section .categories ul li button {
   box-shadow: 0 5px 10px 5px rgba(0,0,0,0.2);
 }
 
-section .categories ul li button.active {
+section .categories ul li form button.active {
   padding: 12px 20px;
   background: #000;
   color: var(--yellow);
@@ -307,7 +308,7 @@ section .categories ul li button.active {
   transition-delay: 0.3s;
 }
 
-.itemBox .details form button {
+.itemBox .details button {
   padding: 0.5rem 1rem;
   color: #000;
   background: var(--yellow);
@@ -317,7 +318,7 @@ section .categories ul li button.active {
   transition: all .4s;
 }
 
-.itemBox .details form button:hover {
+.itemBox .details button:hover {
   background: #000;
   color: var(--yellow);
 }
