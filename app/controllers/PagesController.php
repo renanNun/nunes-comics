@@ -10,6 +10,10 @@ class PagesController {
     $products = App::get('database')->selectAll('produtos');
     $view_page = $_SERVER['REQUEST_URI'];
 
+    
+    $products = array_slice($products, -5);
+
+
     return view('site/index', compact('products', 'view_page'));
   }
   
