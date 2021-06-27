@@ -20,13 +20,15 @@ class PagesController {
       $categories = App::get('database')->selectAll('categorias');
       $products = App::get('database')->selectColumn('produtos', 'fk_category', $_POST['category']);
   
+      $active = $_POST['category'];
   
-      return view('site/items', compact('products','categories'));
+      return view('site/items', compact('products','categories', 'active'));
     } else {
       $products = App::get('database')->selectAll('produtos');
       $categories = App::get('database')->selectAll('categorias');
+      $active = null;
   
-      return view('site/items', compact('products','categories'));
+      return view('site/items', compact('products','categories', 'active'));
     }
 
   }

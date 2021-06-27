@@ -49,7 +49,11 @@
               <li class="list">
                 <form action="/items" method="POST" class="mb-1">
                   <input type="hidden" name="category" value="<?= $category->id ?>">
-                  <button type="submit"><?= $category->nome ?></button>
+                  <?php if($category->id == $active) { ?>
+                    <button class="active" type="submit"><?= $category->nome ?></button>
+                  <?php } else { ?>
+                    <button type="submit"><?= $category->nome ?></button>
+                  <?php }; ?>
                 </form>
               </li>
             <?php }; ?>
