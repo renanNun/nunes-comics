@@ -16,24 +16,25 @@ class PagesController {
   }
   
   public function products() {
-    $products = App::get('database')->selectAll('produtos');
-    $categories = App::get('database')->selectAll('categorias');
+    if(isset($_POST['category'])) {
+      $categories = App::get('database')->selectAll('categorias');
+      $products = App::get('database')->selectColumn('produtos', 'fk_category', $_POST['category']);
+  
+  
+      return view('site/items', compact('products','categories'));
+    } else {
+      $products = App::get('database')->selectAll('produtos');
+      $categories = App::get('database')->selectAll('categorias');
+  
+      return view('site/items', compact('products','categories'));
+    }
 
-    return view('site/items', compact('products','categories'));
   }
 
   public function productsFilter() {
 
     
-    $category = $_POST['category'];
-    
-    
-    $categories = App::get('database')->selectAll('categorias');
-    $products = App::get('database')->selectColumn('produtos', 'fk_category', $_POST['category']);
 
-
-
-    return view('site/items', compact('products','categories'));
   }
 
   public function product() {

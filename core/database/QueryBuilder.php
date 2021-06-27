@@ -43,14 +43,14 @@ class QueryBuilder
             $column
         );
 
-        $sql = $sql . " LIKE {$value}";
+        $sql = $sql . " LIKE " . $value ;
 
         try {
             $statement = $this->pdo->prepare($sql);
     
-            $statement->execute(compact('column'));
+            $statement->execute();
 
-            return $statement->fetch(PDO::FETCH_OBJ);
+            return $statement->fetchAll(PDO::FETCH_OBJ);
         } catch (Exception $e) {
             die("An error occurred when trying to select from database: {$e->getMessage()}");
         }

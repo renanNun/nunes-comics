@@ -42,7 +42,7 @@
     <main>
         <div class="page">
             <div class="logo-page">
-                <a href="index.html"><img src="../../../public/assets/logo.png" alt="logo nunes comics"></a>
+                <a href="/"><img src="../../../public/assets/logo.png" alt="logo nunes comics"></a>
             </div>
             <div>
                 <h1 class="title-contact font">Entre em Contato</h1>
