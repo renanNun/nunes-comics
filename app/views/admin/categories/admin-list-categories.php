@@ -33,7 +33,7 @@
     <div class="container">
       <div class="titulo d-flex justify-content-between align-items-center mb-3">
         <h1 class="mb-0">Categorias</h1>
-        <a href="./admin-add-category.html">
+        <a href="/admin/categories/add">
           <button type="button">Novo</button>
         </a>
       </div>
@@ -46,136 +46,28 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Marvel Comics</td>
-            <td class="d-flex justify-content-end flex-wrap">
-              <a href="./admin-view-category.html" class="mb-1">
-                <button type="button" >Visualizar</button>
-              </a>
-              <a href="./admin-edit-category.html">
-                <button type="button" class="ml-2 mb-1">Editar</button>
-              </a>
-              <button type="button" class="ml-2" onclick="excluir();">Excluir</button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>DC Comics</td>
-            <td class="d-flex justify-content-end flex-wrap">
-              <a href="./admin-view-category.html">
-                <button type="button" class="mb-1">Visualizar</button>
-              </a>
-              <a href="./admin-edit-category.html">
-                <button type="button" class="ml-2 mb-1">Editar</button>
-              </a>
-              <button type="button" class="ml-2" onclick="excluir();">Excluir</button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Wolverine</td>
-            <td class="d-flex justify-content-end flex-wrap">
-              <a href="./admin-view-category.html">
-                <button type="button" class="mb-1">Visualizar</button>
-              </a>
-              <a href="./admin-edit-category.html">
-                <button type="button" class="ml-2 mb-1">Editar</button>
-              </a>
-              <button type="button" class="ml-2" onclick="excluir();">Excluir</button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">4</th>
-            <td>Homem Aranha</td>
-            <td class="d-flex justify-content-end flex-wrap">
-              <a href="./admin-view-category.html">
-                <button type="button" class="mb-1">Visualizar</button>
-              </a>
-              <a href="./admin-edit-category.html">
-                <button type="button" class="ml-2 mb-1">Editar</button>
-              </a>
-              <button type="button" class="ml-2" onclick="excluir();">Excluir</button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">5</th>
-            <td>Batman</td>
-            <td class="d-flex justify-content-end flex-wrap">
-              <a href="./admin-view-category.html">
-                <button type="button" class="mb-1">Visualizar</button>
-              </a>
-              <a href="./admin-edit-category.html">
-                <button type="button" class="ml-2 mb-1">Editar</button>
-              </a>
-              <button type="button" class="ml-2" onclick="excluir();">Excluir</button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">6</th>
-            <td>Green Lantern</td>
-            <td class="d-flex justify-content-end flex-wrap">
-              <a href="./admin-view-category.html">
-                <button type="button" class="mb-1">Visualizar</button>
-              </a>
-              <a href="./admin-edit-category.html">
-                <button type="button" class="ml-2 mb-1">Editar</button>
-              </a>
-              <button type="button" class="ml-2" onclick="excluir();">Excluir</button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">7</th>
-            <td>Superman</td>
-            <td class="d-flex justify-content-end flex-wrap">
-              <a href="./admin-view-category.html">
-                <button type="button" class="mb-1">Visualizar</button>
-              </a>
-              <a href="./admin-edit-category.html">
-                <button type="button" class="ml-2 mb-1">Editar</button>
-              </a>
-              <button type="button" class="ml-2" onclick="excluir();">Excluir</button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">8</th>
-            <td>Green Arrow</td>
-            <td class="d-flex justify-content-end flex-wrap">
-              <a href="./admin-view-category.html">
-                <button type="button" class="mb-1">Visualizar</button>
-              </a>
-              <a href="./admin-edit-category.html">
-                <button type="button" class="ml-2 mb-1">Editar</button>
-              </a>
-              <button type="button" class="ml-2" onclick="excluir();">Excluir</button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">9</th>
-            <td>Thor</td>
-            <td class="d-flex justify-content-end flex-wrap">
-              <a href="./admin-view-category.html">
-                <button type="button" class="mb-1">Visualizar</button>
-              </a>
-              <a href="./admin-edit-category.html">
-                <button type="button" class="ml-2 mb-1">Editar</button>
-              </a>
-              <button type="button" class="ml-2" onclick="excluir();">Excluir</button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">10</th>
-            <td>Silver Surfer</td>
-            <td class="d-flex justify-content-end flex-wrap">
-              <a href="./admin-view-category.html">
-                <button type="button" class="mb-1">Visualizar</button>
-              </a>
-              <a href="./admin-edit-category.html">
-                <button type="button" class="ml-2 mb-1">Editar</button>
-              </a>
-              <button type="button" class="ml-2" onclick="excluir();">Excluir</button>
-            </td>
-          </tr>
+          <?php foreach ($categories as $category) : ?>
+            <tr>
+              <th scope="row"><?= $category->id ?></th>
+              <td><?= $category->name ?></td>
+              <td class="d-flex justify-content-end flex-wrap">
+                <form action="/admin/categories/view" method="POST" class="mb-1">
+                  <input type="hidden" name="id" value="<?= $category->id ?>">
+                  <button type="submit" >Visualizar</button>
+                </form>
+
+                <form action="/admin/categories/edit" method="POST">
+                  <input type="hidden" name="id" value="<?= $category->id ?>">
+                  <button type="submit" class="ml-2 mb-1">Editar</button>
+                </form>
+
+                <form action="/admin/categories/delete" method="POST">
+                  <input type="hidden" name="id" value="<?= $category->id ?>">
+                  <button type="submit" class="ml-2">Excluir</button>
+                </form>
+              </td>
+            </tr>
+          <?php endforeach; ?>
         </tbody>
       </table>
 

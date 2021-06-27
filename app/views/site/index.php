@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +10,7 @@
 
   <!-- carousel -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  
+
   <!-- css -->
   <link rel="stylesheet" href="../../../public/css/global.css">
   <link rel="stylesheet" href="../../../public/css/home.css">
@@ -20,26 +21,26 @@
 
   <title>Home | Nunes' Comics</title>
 </head>
+
 <body>
 
   <div class="wrap">
-    <header>
-        <?php include('app/views/includes/header.php'); ?>
-    </header>
-  
+
+    <?php include('app/views/includes/navbar.php'); ?>
+
     <main>
       <div class="latest">
         <h2>Últimos Lançamentos</h2>
         <div class="swiper-container">
           <div class="swiper-wrapper">
-            <?php foreach($products as $product) { ?>
+            <?php foreach ($products as $product) { ?>
               <div class="swiper-slide"><img src="<?= $product->foto ?>" class="comic-cover" alt=""></div>
             <?php }; ?>
           </div>
           <div class="swiper-pagination"></div>
         </div>
       </div>
-  
+
       <div class="info">
         <div class="content">
           <h3>Teste</h3>
@@ -54,18 +55,18 @@
         </div>
       </div>
     </main>
-    
+
     <div class="halftone bottom">
       <img src="../../../public/assets/halftone-effect.svg" alt="">
     </div>
     <div class="halftone top">
       <img src="../../../public/assets/halftone-effect.svg" alt="">
     </div>
-  
-    <footer>
-      <?php require('app/views/includes/footer.php'); ?>
-    </footer>
-  
+
+
+    <?php require('app/views/includes/footer.php'); ?>
+
+
   </div>
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -93,4 +94,5 @@
   </script>
 
 </body>
+
 </html>

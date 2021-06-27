@@ -31,12 +31,6 @@ $router->post('admin/users/details', 'UsersController@show');
 //deleta usuario
 $router->post('admin/users/delete', "UsersController@delete");
 
-
-
-
-
-
-
 //routes adm category
 $router->get('categories/list', 'PagesController@admCategory');
 
@@ -52,8 +46,10 @@ $router->post('item', 'PagesController@product');
 
   // routes adm user
   $router->get('admin/home', 'PagesController@homeAdm');
-  $router->get('admin/users/list', 'UsersController@admUser');
+  $router->get('admin/users/list', 'UsersController@index');
   $router->post('users', 'UsersController@store');
+
+
 
 
 
@@ -75,9 +71,6 @@ $router->post('item', 'PagesController@product');
   $router->post('admin/products/delete', 'ProductsController@delete');
 
 //routes adm user
-$router->get('admin/home', 'PagesController@homeAdm');
-$router->get('admin/users/list', 'UsersController@admUser');
-$router->post('users', 'UsersController@store');
 
 
 
@@ -94,6 +87,5 @@ $router->post('admin/categories/create', 'CategoriesController@create');
 $router->post('admin/categories/update', 'CategoriesController@edit');
 $router->post('admin/categories/delete', 'CategoriesController@delete');
 
-$router->get('contact', 'PagesController@contact');
 $router->post('contact/send', 'ContactController@sendEmail');
 ?>

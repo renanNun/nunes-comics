@@ -62,7 +62,7 @@ class PagesController {
 
   // talvez não precise
   public function homeAdm(){
-    return view('home-adm');
+    return view('admin/home-adm');
   }
 
   public function formUsers(){
