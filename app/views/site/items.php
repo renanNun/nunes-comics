@@ -65,7 +65,7 @@
               <input type="text" name="search" id="mysearch" placeholder="Buscar...">
             </div>
             <button type="submit" class="icon"></button>
-          <form>
+          </form>
         </div>
       </header>
 

@@ -308,7 +308,7 @@ section .categories ul li form button.active {
   transition-delay: 0.3s;
 }
 
-.itemBox .details button {
+.itemBox .details form button {
   padding: 0.5rem 1rem;
   color: #000;
   background: var(--yellow);
@@ -318,7 +318,7 @@ section .categories ul li form button.active {
   transition: all .4s;
 }
 
-.itemBox .details button:hover {
+.itemBox .details form button:hover {
   background: #000;
   color: var(--yellow);
 }
