@@ -13,6 +13,10 @@ main .pagination .page-item.active .page-link {
   border: 1px solid var(--yellow);
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 /* search ------------------------------------------------------------------- */
 .search {
   position: relative;

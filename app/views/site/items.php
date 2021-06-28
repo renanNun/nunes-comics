@@ -48,11 +48,11 @@
           </ul>
         </div>
         <div class="search">
-          <form action="/items" method="POST" class="mb-1">
+          <form action="/items" method="POST" class="mb-1" id="my-form">
             <div class="input">
               <input type="text" name="search" id="mysearch" placeholder="Buscar...">
             </div>
-            <button type="submit" class="icon"></button>
+            <div type="submit" class="icon"></div>
           </form>
         </div>
       </header>
@@ -118,12 +118,18 @@
 
   <!-- search -->
   <script>
-    const $icon = document.querySelector('.icon');
-    const $search = document.querySelector('.search');
+    $search = document.querySelector('.search');
+    $button = document.querySelector('.icon');
+    $form = document.querySelector('#my-form');
+    $input = document.querySelector('#mysearch');
 
-    $icon.addEventListener('click', () => {
-      $search.classList.toggle('active');
-    })
+    $button.addEventListener('click', () => {
+      if($input.value == '') {
+        $search.classList.toggle('active');
+      } else {
+        $form.submit();
+      }
+    });
   </script>
 
   <?php require("./app/views/includes/footer.php") ?>
